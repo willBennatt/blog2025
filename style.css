@@ -67,66 +67,6 @@
   background: #686868;
 }
 
-/* Nav Section Styles */
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 500;
-}
-
-.sticky-bg {
-  width: 100%;
-  backdrop-filter: blur(20px);
-}
-
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 11;
-}
-
-nav a {
-  text-decoration: none;
-  color: #e7e7e7;
-  transition: 0.5s;
-}
-
-nav a:hover {
-  color: white;
-  font-weight: 500;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: space-between;
-  padding: 2% 6%;
-}
-
-.nav-links ul li {
-  list-style: none;
-  display: inline-block;
-  padding-right: 10px;
-}
-
-.nav-links ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  transition: 0.5s;
-}
-
-.nav-links ul li a:hover {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-}
-
-nav .fa {
-  display: none;
-}
-
 /* Adding Responsivess to Nav Section */
 
 @media (max-width: 700px) {
@@ -207,63 +147,6 @@ nav .fa {
 }
 
 /* Recent Posts Section Styles */
-
-.recent-posts-grid-wrapper {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.recent-posts-grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 0px;
-}
-
-.recent-posts-grid-container a {
-  text-decoration: none;
-}
-
-.grid-item {
-  padding: 20px;
-  text-align: center;
-  transition: 0.5s;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.grid-item:hover {
-  transform: translateY(-20px);
-}
-
-.grid-item img {
-  width: 50%;
-  transition: 1s;
-}
-
-.grid-item img:hover {
-  cursor: pointer;
-}
-
-.recent-post-title {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-.recent-post-date {
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.grid-item p {
-  font-size: 16px;
-  font-weight: 300;
-}
 
 /* Adding Responsiveness */
 

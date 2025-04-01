@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
+    <!-- TODO - add website logo -->
     <title>Will or Won't</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,17 +21,41 @@
     />
   </head>
   <body>
-    <header class="sticky-bg">
-      <nav>
-        <div class="nav-links">
-          <i class="fa fa-bars" onclick="toggleMenu()"></i>
-          <a href="#home" class="hero-link">will or won't</a>
+    <!-- Nav Bar -->
 
-          <div id="nav-links-sub">
-            <ul>
-              <li><a href="#blog">blog</a></li>
-              <li><a href="#about">about</a></li>
-              <li><a href="#contact">contact</a></li>
+    <header class="fixed top-0 right-0 left-0 w-full z-500 backdrop-blur-lg">
+      <nav class="sticky top-0 z-11 text-white">
+        <div class="flex justify-between box-border py-[2%] px-[6%]">
+          <i class="fa fa-bars hidden" onclick="toggleMenu()"></i>
+          <a
+            href="#home"
+            class="hero-link transition duration-400 hover:text-gray-300"
+            >will or won't</a
+          >
+
+          <div id="nav-links-sub flex">
+            <ul class="list-none flex flex-wrap">
+              <li class="pr-10">
+                <a
+                  href="#blog"
+                  class="transition duration-400 hover:text-gray-300"
+                  >blog</a
+                >
+              </li>
+              <li class="pr-10">
+                <a
+                  href="#about"
+                  class="transition duration-400 hover:text-gray-300"
+                  >about</a
+                >
+              </li>
+              <li class="pr-10">
+                <a
+                  href="#contact"
+                  class="transition duration-400 hover:text-gray-300"
+                  >contact</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -38,43 +64,92 @@
 
     <!-- Landing Section  -->
 
-    <section id="home">
-      <div class="recent-posts-grid-wrapper">
-        <div class="recent-posts-grid-container">
-          <a href="#post1">
-            <div class="grid-item">
-              <img
-                src="assets/images/dirty_d_canyon1.png"
-                alt="in a canyon on the dirty devil river"
-              />
-              <span class="recent-post-title">Dirty D</span>
-              <span class="recent-post-date">March 30, 1999</span>
-              <p>A packraft down one of America's smallest, dirtiest rivers</p>
-            </div>
-          </a>
-          <a href="#post2">
-            <div class="grid-item">
-              <img src="assets/images/maple_loop1.png" alt="maple loop pass" />
-              <span class="recent-post-title">Maple Loop Pass</span>
-              <span class="recent-post-date">March 31, 1999</span>
-              <p>A nice hike in a nice but crowded place.</p>
-            </div>
-          </a>
-          <a href="#post3">
-            <div class="grid-item">
-              <img src="assets/images/paisano1.png" alt="on paisano pinnacle" />
-              <span class="recent-post-title">Burgundy/Paisano Linkup</span>
-              <span class="recent-post-date">April 1, 1999</span>
-              <p>A nice climb in a nice and empty place</p>
-            </div>
-          </a>
+    <section
+      id="home"
+      class="bg-salmon-pink text-white min-h-screen px-20 content-center"
+    >
+      <h2 class="text-4xl font-extrabold flex pb-10">Recent Posts</h2>
+      <!-- followed example from https://flowbite.com/docs/components/gallery/ -->
+      <div class="recent-posts-grid-wrapper w-full">
+        <div
+          class="recent-posts-grid-container justify-items-center grid grid-cols-3 gap-20"
+        >
+          <div
+            class="grid-item grid gap-4 justify-items-center transition duration-500 hover:-translate-y-10"
+          >
+            <a href="#post1" class="">
+              <div class="flex flex-col items-center justify-items-center">
+                <img
+                  src="assets/images/dirty_d_canyon1.png"
+                  alt="in a canyon on the dirty devil river"
+                  class="h-auto max-w-full rounded-lg"
+                />
+                <span class="recent-post-title text-xl font-medium"
+                  >Dirty D</span
+                >
+                <span class="recent-post-date text-sm font-sm"
+                  >March 30, 1999</span
+                >
+                <p>
+                  A packraft down one of America's smallest, dirtiest rivers
+                </p>
+              </div>
+            </a>
+          </div>
+          <div
+            class="grid-item grid gap-4 justify-items-center transition duration-500 hover:-translate-y-10"
+          >
+            <a href="#post1" class="">
+              <div class="flex flex-col items-center">
+                <img
+                  src="assets/images/maple_loop1.png"
+                  alt="maple loop pass"
+                  class="h-auto max-w-full rounded-lg"
+                />
+                <span class="recent-post-title text-xl font-medium"
+                  >Maple Loop Pass</span
+                >
+                <span class="recent-post-date text-sm font-sm"
+                  >March 31, 1999</span
+                >
+                <p>A nice hike in a nice but crowded place.</p>
+              </div>
+            </a>
+          </div>
+          <div
+            class="grid-item grid gap-4 justify-items-center transition duration-500 hover:-translate-y-10"
+          >
+            <a href="#post1" class="">
+              <div class="flex flex-col items-center">
+                <img
+                  src="assets/images/paisano1.png"
+                  alt="on paisano pinnacle"
+                  class="h-auto max-w-full rounded-lg"
+                />
+                <span class="recent-post-title text-xl font-medium"
+                  >Burgundy/Paisano Linkup</span
+                >
+                <span class="recent-post-date text-sm font-sm"
+                  >April 1, 1999</span
+                >
+                <p>A nice climb in a nice and empty place</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
+      <span class="text-lg font-bold flex pt-10 pr-10 justify-center"
+        ><a
+          href="#blog"
+          class="border rounded-full bg-olive-green hover:bg-lime-700 px-4 py-2"
+          >more posts</a
+        ></span
+      >
     </section>
 
     <!-- About Us  -->
 
-    <section id="about">
+    <section id="about" class="bg-olive-green min-h-screen">
       <div class="about-container">
         <div class="about-row reveal">
           <div class="about-col">
@@ -108,42 +183,9 @@
       </div>
     </section>
 
-    <!-- Product Section -->
+    <!-- Contact Section -->
 
-    <section id="our-products">
-      <div class="recent-posts-grid-wrapper reveal">
-        <div class="recent-posts-grid-container">
-          <div class="grid-item">
-            <img src="assets/images/orange-slice.png" alt="" />
-            <p>Lemon A</p>
-          </div>
-          <div class="grid-item">
-            <img src="assets/images/orange-slice.png" alt="" />
-            <p>Lemon B</p>
-          </div>
-          <div class="grid-item">
-            <img src="assets/images/orange-slice.png" alt="" />
-            <p>Lemon C</p>
-          </div>
-          <div class="grid-item">
-            <img src="assets/images/orange-slice.png" alt="" />
-            <p>Lemon D</p>
-          </div>
-          <div class="grid-item">
-            <img src="assets/images/orange-slice.png" alt="" />
-            <p>Lemon E</p>
-          </div>
-          <div class="grid-item">
-            <img src="assets/images/orange-slice.png" alt="" />
-            <p>Lemon F</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call To Action Section -->
-
-    <section id="contact">
+    <section id="contact" class="bg-salmon-pink">
       <div class="contact-row reveal">
         <div class="contact-col">
           <div class="testimonial-wrapper">

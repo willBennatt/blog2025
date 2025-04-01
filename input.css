@@ -1,0 +1,16 @@
+/* 
+input.css -> this will get translated to output.css by tailwind
+
+When developing, run:
+    ./tailwindcss -i input.css -o output.css --watch
+When deploying, run:
+    ./tailwindcss -i input.css -o output.css --minify
+*/
+
+@import "tailwindcss";
+
+@theme {
+  --color-olive-green: #b1d27d;
+  --color-salmon-pink: #ff7e70;
+  --font-poppins: Poppins, sans-serif;
+}
