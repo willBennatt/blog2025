@@ -23,7 +23,9 @@
   <body>
     <!-- Nav Bar -->
 
-    <header class="fixed top-0 right-0 left-0 w-full z-500 backdrop-blur-lg">
+    <header
+      class="fixed top-0 right-0 left-0 w-full z-500 backdrop-blur-lg max-md:backdrop-blur-none"
+    >
       <nav class="sticky top-0 z-11 text-white">
         <div class="flex justify-between box-border py-[2%] px-[6%]">
           <a
@@ -31,7 +33,7 @@
             class="block text-xl m-10 md:hidden"
             onclick="toggleMenu()"
           >
-            <i class="fa fa-bars"></i>
+            <i class="block fa fa-bars"></i>
           </a>
           <a
             href="#home"
@@ -41,30 +43,24 @@
 
           <div
             id="nav-links-sub"
-            class="flex max-md:-left-200px max-md:text-right max-md:mt-70 max-md:absolute max-md:h-screen max-md:w-1/3 max-md:transition max-md:duration-750 max-md:backdrop-blur-sm"
+            class="flex max-md:-left-200 max-md:content-right max-md:items-right max-md:absolute max-md:mt-30 max-md:h-screen max-md:w-1/3 max-md:transition max-md:duration-400 max-md:backdrop-blur-sm"
           >
-            <ul class="list-none flex flex-wrap">
-              <li
-                class="max-md:block max-md:text-left max-md:py-5 max-md:px-50 pr-10"
-              >
+            <ul class="list-none max-md:block max-md:text-left flex flex-wrap">
+              <li class="max-md:block pr-10">
                 <a
                   href="#blog"
                   class="transition duration-400 hover:text-gray-300"
                   >blog</a
                 >
               </li>
-              <li
-                class="max-md:block max-md:text-left max-md:py-5 max-md:px-50 pr-10"
-              >
+              <li class="max-md:block pr-10">
                 <a
                   href="#about"
                   class="transition duration-400 hover:text-gray-300"
                   >about</a
                 >
               </li>
-              <li
-                class="max-md:block max-md:text-left max-md:py-5 max-md:px-50 pr-10"
-              >
+              <li class="max-md:block pr-10">
                 <a
                   href="#contact"
                   class="transition duration-400 hover:text-gray-300"
