@@ -14,3 +14,7 @@ When deploying, run:
   --color-salmon-pink: #ff7e70;
   --font-poppins: Poppins, sans-serif;
 }
+
+[hidden] {
+  display: none !important;
+}

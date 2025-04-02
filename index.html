@@ -7,7 +7,6 @@
     <!-- TODO - add website logo -->
     <title>Will or Won't</title>
 
-    <link href="./output.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +18,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Nav Bar -->
@@ -26,30 +26,45 @@
     <header class="fixed top-0 right-0 left-0 w-full z-500 backdrop-blur-lg">
       <nav class="sticky top-0 z-11 text-white">
         <div class="flex justify-between box-border py-[2%] px-[6%]">
-          <i class="fa fa-bars hidden" onclick="toggleMenu()"></i>
+          <a
+            href="javascript:void(0);"
+            class="block text-xl m-10 md:hidden"
+            onclick="toggleMenu()"
+          >
+            <i class="fa fa-bars"></i>
+          </a>
           <a
             href="#home"
-            class="hero-link transition duration-400 hover:text-gray-300"
+            class="hero-link max-md:flex max-md:items-center max-md:content-center transition duration-400 hover:text-gray-300"
             >will or won't</a
           >
 
-          <div id="nav-links-sub flex">
+          <div
+            id="nav-links-sub"
+            class="flex max-md:-left-200px max-md:text-right max-md:mt-70 max-md:absolute max-md:h-screen max-md:w-1/3 max-md:transition max-md:duration-750 max-md:backdrop-blur-sm"
+          >
             <ul class="list-none flex flex-wrap">
-              <li class="pr-10">
+              <li
+                class="max-md:block max-md:text-left max-md:py-5 max-md:px-50 pr-10"
+              >
                 <a
                   href="#blog"
                   class="transition duration-400 hover:text-gray-300"
                   >blog</a
                 >
               </li>
-              <li class="pr-10">
+              <li
+                class="max-md:block max-md:text-left max-md:py-5 max-md:px-50 pr-10"
+              >
                 <a
                   href="#about"
                   class="transition duration-400 hover:text-gray-300"
                   >about</a
                 >
               </li>
-              <li class="pr-10">
+              <li
+                class="max-md:block max-md:text-left max-md:py-5 max-md:px-50 pr-10"
+              >
                 <a
                   href="#contact"
                   class="transition duration-400 hover:text-gray-300"
@@ -68,11 +83,15 @@
       id="home"
       class="bg-salmon-pink text-white min-h-screen px-20 content-center"
     >
-      <h2 class="text-4xl font-extrabold flex pb-10">Recent Posts</h2>
+      <h2
+        class="text-lg md:text-xl lg:2xl xl:text-4xl font-extrabold flex pb-10"
+      >
+        Recent Posts
+      </h2>
       <!-- followed example from https://flowbite.com/docs/components/gallery/ -->
       <div class="recent-posts-grid-wrapper w-full">
         <div
-          class="recent-posts-grid-container justify-items-center grid grid-cols-3 gap-20"
+          class="recent-posts-grid-container justify-items-center text-center grid grid-cols-1 md:grid-cols-3 gap-20"
         >
           <div
             class="grid-item grid gap-4 justify-items-center transition duration-500 hover:-translate-y-10"
@@ -84,7 +103,7 @@
                   alt="in a canyon on the dirty devil river"
                   class="h-auto max-w-full rounded-lg"
                 />
-                <span class="recent-post-title text-xl font-medium"
+                <span class="recent-post-title text-lg md:text-xl font-medium"
                   >Dirty D</span
                 >
                 <span class="recent-post-date text-sm font-sm"
@@ -106,7 +125,7 @@
                   alt="maple loop pass"
                   class="h-auto max-w-full rounded-lg"
                 />
-                <span class="recent-post-title text-xl font-medium"
+                <span class="recent-post-title text-lg md:text-xl font-medium"
                   >Maple Loop Pass</span
                 >
                 <span class="recent-post-date text-sm font-sm"
@@ -126,7 +145,7 @@
                   alt="on paisano pinnacle"
                   class="h-auto max-w-full rounded-lg"
                 />
-                <span class="recent-post-title text-xl font-medium"
+                <span class="recent-post-title text-lg md:text-xl font-medium"
                   >Burgundy/Paisano Linkup</span
                 >
                 <span class="recent-post-date text-sm font-sm"
@@ -138,13 +157,15 @@
           </div>
         </div>
       </div>
-      <span class="text-lg font-bold flex pt-10 pr-10 justify-center"
-        ><a
-          href="#blog"
-          class="border rounded-full bg-olive-green hover:bg-lime-700 px-4 py-2"
-          >more posts</a
-        ></span
-      >
+      <div class="w-full justify-items-center pt-10">
+        <span class="text-lg font-bold flex justify-center"
+          ><a
+            href="#blog"
+            class="border rounded-full bg-olive-green hover:bg-lime-700 px-4 py-2"
+            >more posts</a
+          ></span
+        >
+      </div>
     </section>
 
     <!-- About Us  -->
