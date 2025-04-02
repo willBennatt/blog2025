@@ -7,63 +7,74 @@
     <!-- TODO - add website logo -->
     <title>Will or Won't</title>
 
-    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Nav Bar -->
 
-    <header
-      class="fixed top-0 right-0 left-0 w-full z-500 backdrop-blur-lg max-md:backdrop-blur-none"
-    >
-      <nav class="sticky top-0 z-11 text-white">
-        <div class="flex justify-between box-border py-[2%] px-[6%]">
-          <a
-            href="javascript:void(0);"
-            class="block text-xl m-10 md:hidden"
+    <header class="fixed top-0 right-0 left-0 w-screen z-500 backdrop-blur-lg">
+      <!-- nav bar adapted from https://flowbite.com/docs/components/navbar/-->
+      <nav class="sticky text-white border-gray-200">
+        <div
+          class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4 md:flex-nowrap md:box-border md:px-[6%]"
+        >
+          <button
+            data-collapse-toggle="navbar-hamburger"
+            type="button"
+            class="flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
+            aria-controls="navbar-hamburger"
+            aria-expanded="false"
             onclick="toggleMenu()"
           >
-            <i class="block fa fa-bars"></i>
-          </a>
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
           <a
-            href="#home"
-            class="hero-link max-md:flex max-md:items-center max-md:content-center transition duration-400 hover:text-gray-300"
-            >will or won't</a
+            href="#"
+            class="hidden sm:inline-flex items-center space-x-3 rtl:space-x-reverse"
           >
+            <span
+              class="self-center text-lg md:text-2xl font-semibold whitespace-nowrap hover:text-gray-500"
+              >will or won't</span
+            >
+          </a>
 
-          <div
-            id="nav-links-sub"
-            class="flex max-md:-left-200 max-md:content-right max-md:items-right max-md:absolute max-md:mt-30 max-md:h-screen max-md:w-1/3 max-md:transition max-md:duration-400 max-md:backdrop-blur-sm"
-          >
-            <ul class="list-none max-md:block max-md:text-left flex flex-wrap">
-              <li class="max-md:block pr-10">
-                <a
-                  href="#blog"
-                  class="transition duration-400 hover:text-gray-300"
-                  >blog</a
+          <div class="w-full md:flex md:w-auto hidden" id="navbar-hamburger">
+            <ul
+              class="flex flex-col md:flex-row font-medium mt-4 rounded-lg text-white"
+            >
+              <li class="md:inline-block">
+                <a href="#" class="block py-2 px-3 rounded-sm hover:bg-gray-500"
+                  >home</a
                 >
               </li>
-              <li class="max-md:block pr-10">
-                <a
-                  href="#about"
-                  class="transition duration-400 hover:text-gray-300"
+              <li class="md:inline-block">
+                <a href="#" class="block py-2 px-3 rounded-sm hover:bg-gray-500"
                   >about</a
                 >
               </li>
-              <li class="max-md:block pr-10">
-                <a
-                  href="#contact"
-                  class="transition duration-400 hover:text-gray-300"
+              <li class="md:inline-block">
+                <a href="#" class="block py-2 px-3 rounded-sm hover:bg-gray-500"
                   >contact</a
                 >
               </li>
@@ -77,17 +88,15 @@
 
     <section
       id="home"
-      class="bg-salmon-pink text-white min-h-screen px-20 content-center"
+      class="bg-salmon-pink text-white min-h-screen px-20 py-20 content-center"
     >
-      <h2
-        class="text-lg md:text-xl lg:2xl xl:text-4xl font-extrabold flex pb-10"
-      >
+      <h2 class="text-2xl md:text-4xl font-extrabold flex pb-10">
         Recent Posts
       </h2>
       <!-- followed example from https://flowbite.com/docs/components/gallery/ -->
       <div class="recent-posts-grid-wrapper w-full">
         <div
-          class="recent-posts-grid-container justify-items-center text-center grid grid-cols-1 md:grid-cols-3 gap-20"
+          class="recent-posts-grid-container justify-items-center text-center grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20"
         >
           <div
             class="grid-item grid gap-4 justify-items-center transition duration-500 hover:-translate-y-10"
@@ -327,13 +336,11 @@
       //learned this from Youtube Tutorial - by Easy Tutorials - https://www.youtube.com/watch?v=oYRda7UtuhA
 
       function toggleMenu() {
-        var x = document.getElementById("nav-links-sub");
-        if (x.style.left != "0px") {
-          x.style.left = "0px";
-          document.body.style.overflowY = "hidden";
+        var x = document.getElementById("navbar-hamburger");
+        if (x.className.includes("hidden")) {
+          x.className = x.className.replace("hidden", "");
         } else {
-          x.style.left = "-200px";
-          document.body.style.overflowY = "visible";
+          x.className += "hidden";
         }
       }
     </script>
