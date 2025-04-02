@@ -165,47 +165,6 @@
 
 /* About Us Section styles */
 
-#about {
-  min-height: 100vh;
-  max-width: 100vw;
-  background-color: var(--green);
-  min-height: 100vh;
-  background-image: url(assets/images/backdrop.png);
-  background-position: center;
-  background-size: cover;
-}
-
-#about p {
-  color: black;
-}
-
-.about-container {
-  text-align: left;
-  width: 80%;
-  margin: auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.about-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.about-col {
-  padding: 10px;
-  flex-basis: 31%;
-}
-
-.about-col h3 {
-  color: black;
-  margin-bottom: 10px;
-}
-
 /* Adding responsiveness to About Us Section */
 
 @media (max-width: 700px) {
@@ -285,42 +244,6 @@
   .social-icon-wrapper img {
     width: 70%;
   }
-}
-
-#footer-section {
-  color: white;
-  width: 100%;
-  margin: auto;
-  background-color: var(--pink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-row {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--pink);
-}
-
-.footer-nav-links {
-  display: flex;
-  justify-content: space-between;
-  padding: 2% 0%;
-}
-
-.footer-nav-links ul li {
-  list-style: none;
-  display: inline-block;
-  padding-right: 10px;
-}
-
-.footer-nav-links ul li a {
-  text-decoration: none;
-  color: white;
 }
 
 /* Adding Responsiveness */

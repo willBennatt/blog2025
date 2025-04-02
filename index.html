@@ -149,11 +149,19 @@
 
     <!-- About Us  -->
 
-    <section id="about" class="bg-olive-green min-h-screen">
-      <div class="about-container">
-        <div class="about-row reveal">
-          <div class="about-col">
-            <h3>about us</h3>
+    <section
+      id="about"
+      class="bg-olive-green min-h-screen min-w-screen text-white px-20 content-center"
+    >
+      <div class="about-container flex flex-col">
+        <div class="about-row reveal flex flex-row">
+          <div class="about-col p-10 content-center">
+            <h2 class="text-4xl font-extrabold flex pb-10">About Me</h2>
+            <img
+              src="assets/images/paisano1.png"
+              alt="on paisano pinnacle"
+              class="h-auto max-w-full rounded-lg pb-10"
+            />
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -161,7 +169,7 @@
               type and scrambled it to make a type specimen book.
             </p>
           </div>
-          <div class="about-col">
+          <div class="about-col p-10 content-center">
             <h3>freshly squeezed</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -170,7 +178,7 @@
               type and scrambled it to make a type specimen book.
             </p>
           </div>
-          <div class="about-col">
+          <div class="about-col p-10 content-center">
             <h3>a call away</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -185,20 +193,23 @@
 
     <!-- Contact Section -->
 
-    <section id="contact" class="bg-salmon-pink">
-      <div class="contact-row reveal">
+    <section
+      id="contact"
+      class="bg-salmon-pink min-h-screen min-w-screen text-white px-20 content-center"
+    >
+      <div class="contact-row reveal flex flex-row">
         <div class="contact-col">
-          <div class="testimonial-wrapper">
-            <p>
-              One of the best products I've had in my life. I drink, eat, sleep,
-              read and breath lemonade !!!
-            </p>
-            <br />
-            <p><b>Glen</b> - CEO, CIO, CFO, Producer, Sole Customer :)</p>
+          <div
+            class="testimonial-wrapper flex flex-col justify-center items-start"
+          >
+            <p>This will be a link to my resume.</p>
           </div>
         </div>
         <div class="contact-col">
-          <div class="social-icon-wrapper">
+          <div
+            class="social-icon-wrapper flex flex-row justify-around items-center"
+          >
+            <p>This will be a linkedin icon and maybe more</p>
             <a
               href="https://www.instagram.com/glen.paulson/?hl=en"
               target="_blank"
@@ -219,15 +230,44 @@
 
     <!-- Footer Section -->
 
-    <section id="footer-section">
-      <div class="footer-row">
+    <section
+      id="footer-section"
+      class="box-border bg-olive-green min-w-screen text-white flex content-center justify-center"
+    >
+      <div
+        class="footer-row box-border bg-olive-green w-4/5 flex flex-row justify-between py-[1%] px-0"
+      >
         <p>Copyright &copy; William Bennatt 2025</p>
-        <div class="footer-nav-links">
-          <ul>
-            <li><a href="#home">will or won't</a></li>
-            <li><a href="#blog">blog</a></li>
-            <li><a href="#about">about</a></li>
-            <li><a href="#contact">contact</a></li>
+        <div class="footer-nav-links flex justify-between">
+          <ul class="list-none">
+            <li class="inline-block pr-10">
+              <a
+                href="#home"
+                class="transition duration-400 hover:text-gray-300"
+                >will or won't</a
+              >
+            </li>
+            <li class="inline-block pr-10">
+              <a
+                href="#blog"
+                class="transition duration-400 hover:text-gray-300"
+                >blog</a
+              >
+            </li>
+            <li class="inline-block pr-10">
+              <a
+                href="#about"
+                class="transition duration-400 hover:text-gray-300"
+                >about</a
+              >
+            </li>
+            <li class="inline-block pr-10">
+              <a
+                href="#contact"
+                class="transition duration-400 hover:text-gray-300"
+                >contact</a
+              >
+            </li>
           </ul>
         </div>
       </div>
