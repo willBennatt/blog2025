@@ -186,33 +186,30 @@
               About Me
             </h2>
             <img
-              src="assets/images/paisano1.png"
-              alt="on paisano pinnacle"
+              src="assets/images/selfie.png"
+              alt="selfie"
               class="h-auto max-w-full rounded-lg pb-5 md:pb-10"
             />
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+            <p class="md:text-lg">
+              My name is Will. On this blog, I write about experiences I've had
+              and whether I <b><em>will</em></b> or <b><em>won't</em></b> do
+              them again.
             </p>
           </div>
           <div class="about-col py-5 md:py-10 md:px-10 content-center">
-            <h3>freshly squeezed</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+            <p class="md:text-lg">
+              I like all things outdoors and often write about my climbing,
+              skiing, or hiking trips. I lived in Seattle for almost 8 years and
+              toured all over the Cascade mountains, but I moved to Munich,
+              Germany, in 2025 where I am now exploring the Alps.
             </p>
           </div>
           <div class="about-col py-5 md:py-10 md:px-10 content-center">
-            <h3>a call away</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+            <p class="md:text-lg">
+              You might find the occasional post about the tech industry or
+              software engineering as well &mdash; I worked at Amazon Web
+              Services for three and a half years and enjoy coding small
+              projects in my free time, like this website.
             </p>
           </div>
         </div>
@@ -223,34 +220,76 @@
 
     <section
       id="contact"
-      class="bg-salmon-pink min-h-screen min-w-screen text-white px-20 content-center"
+      class="bg-salmon-pink min-h-screen min-w-screen text-white py-20 px-10 md:px-20 content-center"
     >
-      <div class="contact-row reveal flex flex-row">
-        <div class="contact-col">
-          <div
-            class="testimonial-wrapper flex flex-col justify-center items-start"
+      <!-- Pop up email subscribtion modified from https://medium.com/@francesco.saviano87/how-to-build-a-newsletter-signup-modal-popup-using-html-css-and-javascript-828447b7d163 -->
+      <div
+        id="modal"
+        class="modal fixed z-5 top-0 left-0 right-0 w-screen h-screen backdrop-blur-md py-20 px-10 md:p-30 text-black content-center justify-center hidden"
+      >
+        <div
+          class="modal-content bg-white p-5 md:p-10 rounded-xl text-center shadow-lg w-auto max-w-200 h-fit animate-fade-in"
+        >
+          <h2 class="text-xl font-bold">🎉 Sign Up for My Newsletter!</h2>
+          <p>
+            Subscribe to my newsletter for email updates every time I publish a
+            new post.
+          </p>
+
+          <!-- TODO: make this actually record emails -->
+          <form id="subscribeForm">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
+              class="email-input p-5 w-auto md:w-4/5 my-5 rounded-md border-solid border-1 border-gray-200 text-md"
+            />
+            <button
+              type="submit"
+              class="submit-btn py-5 px-10 bg-olive-green hover:bg-lime-700 rounded-md cursor-pointer text-md"
+            >
+              Subscribe Now 🚀
+            </button>
+          </form>
+
+          <button
+            class="close-modal-btn mt-5 py-5 px-10 bg-salmon-pink hover:bg-rose-400 rounded-md cursor-pointer text-md"
           >
-            <p>This will be a link to my resume.</p>
-          </div>
+            Close
+          </button>
         </div>
-        <div class="contact-col">
+      </div>
+      <h2 class="text-2xl md:text-4xl font-extrabold flex pb-10">Contact</h2>
+      <div class="recent-posts-grid-wrapper w-full">
+        <div
+          class="recent-posts-grid-container justify-items-center text-center grid grid-cols-1 md:grid-cols-2 gap-10"
+        >
           <div
-            class="social-icon-wrapper flex flex-row justify-around items-center"
+            class="grid-item grid gap-4 justify-items-center p-10 rounded-xl text-white text-center shadow-lg outline-solid outline-olive-green"
           >
-            <p>This will be a linkedin icon and maybe more</p>
             <a
-              href="https://www.instagram.com/glen.paulson/?hl=en"
+              href="https://www.linkedin.com/in/william-bennatt-243970174"
               target="_blank"
               rel="noopener noreferrer"
-              ><img src="assets/images/instagram.png" alt=""
-            /></a>
-            <a href="#contact"
-              ><img src="assets/images/facebook.png" alt=""
-            /></a>
-            <a href="#contact"
-              ><img src="assets/images/twitter.png" alt=""
-            /></a>
-            <a href="#contact"><img src="assets/images/mail.png" alt="" /></a>
+              class="hover:outline-solid hover:outline-lime-700 rounded-xl"
+            >
+              <img
+                src="assets/images/in-logo/icons8-linkedin-144.png"
+                alt="LinkedIn"
+                class="h-auto max-w-full pb-5"
+              />
+            </a>
+            <p class="text-xl">Find me on LinkedIn</p>
+          </div>
+          <div
+            class="grid-item grid gap-4 justify-items-center text-center content-center"
+          >
+            <button
+              id="openModal"
+              class="open-modal-btn p-12 max-h-45 border rounded-full bg-olive-green hover:bg-lime-700 text-xl cursor-pointer"
+            >
+              Subscribe to my newsletter!
+            </button>
           </div>
         </div>
       </div>
@@ -334,17 +373,60 @@
         titleTwo.style.left = value * 0.5 + "px";
       });
 
-      //adding responsive nav for mobile screens
-      //learned this from Youtube Tutorial - by Easy Tutorials - https://www.youtube.com/watch?v=oYRda7UtuhA
+      // Responsive nav bar for mobile screens
 
       function toggleMenu() {
-        var x = document.getElementById("navbar-hamburger");
-        if (x.className.includes("hidden")) {
-          x.className = x.className.replace("hidden", "");
+        var navMenu = document.getElementById("navbar-hamburger");
+        // if (x.className.includes("hidden")) {
+        //   x.className = x.className.replace("hidden", "");
+        // } else {
+        //   x.className += "hidden";
+        // }
+        if (navMenu.style.display === "block") {
+          navMenu.style.display = "none";
         } else {
-          x.className += "hidden";
+          navMenu.style.display = "block";
         }
       }
+
+      // Newsletter subscription pop-up
+
+      // Get modal element using its ID
+      const modal = document.getElementById("modal");
+
+      // Get the button that opens the modal
+      const openModalBtn = document.getElementById("openModal");
+
+      // Get the close button inside the modal content (for extra closure option)
+      const closeModalBtnInside = document.querySelector(".close-modal-btn");
+
+      // Function to open the modal when the button is clicked
+      openModalBtn.addEventListener("click", () => {
+        modal.style.display = "flex"; // Display the modal by setting its display to flex
+      });
+
+      // Function to close the modal when the close button inside modal content is clicked
+      closeModalBtnInside.addEventListener("click", () => {
+        modal.style.display = "none"; // Hide the modal
+      });
+
+      // Function to close the modal when clicking outside the modal content
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none"; // Hide the modal if user clicks outside the modal content
+        }
+      });
+
+      // Handle form submission (this is simulated for the tutorial)
+      document
+        .getElementById("subscribeForm")
+        .addEventListener("submit", (e) => {
+          e.preventDefault(); // Prevent the default form submission behavior
+          alert(
+            "Oops! I haven't actually built this yet. Try again in a few days/weeks/months."
+          ); // Simulated response
+          modal.style.display = "none"; // Hide the modal after the form is submitted
+        });
     </script>
   </body>
 </html>

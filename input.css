@@ -13,6 +13,16 @@ When deploying, run:
   --color-olive-green: #b1d27d;
   --color-salmon-pink: #ff7e70;
   --font-poppins: Poppins, sans-serif;
+  --animate-fade-in: fadeIn 0.5s ease;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 [hidden] {
