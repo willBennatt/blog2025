@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="font-sans scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
-    <!-- TODO - add website logo -->
+
     <title>Will or Won't</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +50,7 @@
             </svg>
           </button>
           <a
-            href="#"
+            href="/index.html"
             class="hidden sm:inline-flex items-center space-x-3 rtl:space-x-reverse"
           >
             <span
@@ -65,21 +65,28 @@
             >
               <li class="md:inline-block">
                 <a
-                  href="#"
+                  href="/index.html#home"
                   class="block py-2 px-3 rounded-sm hover:text-gray-500"
                   >home</a
                 >
               </li>
               <li class="md:inline-block">
                 <a
-                  href="#"
+                  href="/blog.html"
+                  class="block py-2 px-3 rounded-sm hover:text-gray-500"
+                  >blog</a
+                >
+              </li>
+              <li class="md:inline-block">
+                <a
+                  href="/index.html#about"
                   class="block py-2 px-3 rounded-sm hover:text-gray-500"
                   >about</a
                 >
               </li>
               <li class="md:inline-block">
                 <a
-                  href="#"
+                  href="/index.html#contact"
                   class="block py-2 px-3 rounded-sm hover:text-gray-500"
                   >contact</a
                 >
@@ -96,9 +103,7 @@
       id="home"
       class="bg-light-salmon dark:bg-dark-salmon text-black dark:text-white min-h-screen px-10 md:px-20 py-20 content-center overflow-hidden"
     >
-      <h2 class="text-2xl md:text-4xl font-extrabold flex pb-10">
-        Recent Posts
-      </h2>
+      <h2 class="text-2xl md:text-4xl font-bold flex pb-10">Recent Posts</h2>
       <!-- followed example from https://flowbite.com/docs/components/gallery/ -->
       <div class="recent-posts-grid-wrapper w-full">
         <div
@@ -171,7 +176,7 @@
       <div class="w-full justify-items-center pt-10">
         <span class="text-lg font-bold flex justify-center"
           ><a
-            href="#blog"
+            href="/blog.html"
             class="rounded-full underline text-black dark:text-white hover:text-white hover:bg-salmon px-4 py-2"
             >more posts</a
           ></span
@@ -188,7 +193,7 @@
       <div class="about-container flex flex-col">
         <div class="about-row reveal flex flex-col md:flex-row">
           <div class="about-col py-5 md:py-10 md:px-10 content-center">
-            <h2 class="text-2xl md:text-4xl font-extrabold flex pb-5 md:pb-10">
+            <h2 class="text-2xl md:text-4xl font-bold flex pb-5 md:pb-10">
               About Me
             </h2>
             <img
@@ -197,9 +202,9 @@
               class="h-auto max-w-full rounded-lg pb-5 md:pb-10"
             />
             <p class="md:text-lg">
-              My name is Will. On this blog, I write about experiences I've had
-              and whether I <b><em>will</em></b> or <b><em>won't</em></b> do
-              them again.
+              My name is Will. On this blog, I write about things I've done and
+              whether I <b><em>will</em></b> or <b><em>won't</em></b> do them
+              again.
             </p>
           </div>
           <div class="about-col py-5 md:py-10 md:px-10 content-center">
@@ -265,7 +270,7 @@
           </button>
         </div>
       </div>
-      <h2 class="text-2xl md:text-4xl font-extrabold flex pb-10">Contact</h2>
+      <h2 class="text-2xl md:text-4xl font-bold flex pb-10">Contact</h2>
       <div class="recent-posts-grid-wrapper w-full">
         <div
           class="recent-posts-grid-container reveal justify-items-center text-center grid grid-cols-1 md:grid-cols-2 gap-10"

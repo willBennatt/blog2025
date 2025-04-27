@@ -16,7 +16,6 @@ When deploying, run:
   --color-light-salmon: #ffe0dd;
   --color-salmon: #ff7e70;
   --color-dark-salmon: #2b1b1b;
-  --font-poppins: Poppins, sans-serif;
   --animate-fade-in: fadeIn 0.5s ease;
 
   @keyframes fadeIn {
@@ -68,4 +67,15 @@ Taken from https://medium.com/@glen.gracieux/building-a-simple-html-css-js-websi
 .reveal.active {
   transform: translateY(0px);
   opacity: 1;
+}
+
+/*
+Styling active buttons for filtering
+*/
+.active-btn {
+  @apply text-salmon hover:text-white border border-salmon bg-white hover:bg-salmon focus:ring-4 focus:outline-none focus:ring-dark-salmon rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-light-salmon dark:text-salmon dark:hover:text-white dark:hover:bg-salmon dark:bg-gray-900 dark:focus:ring-light-salmon;
+}
+
+.inactive-btn {
+  @apply text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800;
 }
