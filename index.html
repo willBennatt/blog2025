@@ -20,14 +20,14 @@
 
     <header class="fixed top-0 right-0 left-0 w-screen z-500 backdrop-blur-lg">
       <!-- nav bar adapted from https://flowbite.com/docs/components/navbar/-->
-      <nav class="sticky text-white border-gray-200">
+      <nav class="sticky text-black dark:text-white border-gray-200">
         <div
           class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4 md:flex-nowrap md:box-border md:px-[6%]"
         >
           <button
             data-collapse-toggle="navbar-hamburger"
             type="button"
-            class="flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
+            class="flex items-center justify-center p-2 w-10 h-10 text-sm text-black dark:text-white rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
             aria-controls="navbar-hamburger"
             aria-expanded="false"
             onclick="toggleMenu()"
@@ -61,20 +61,26 @@
 
           <div class="w-full md:flex md:w-auto hidden" id="navbar-hamburger">
             <ul
-              class="flex flex-col md:flex-row font-medium mt-4 rounded-lg text-white"
+              class="flex flex-col md:flex-row font-medium mt-4 rounded-lg text-black dark:text-white"
             >
               <li class="md:inline-block">
-                <a href="#" class="block py-2 px-3 rounded-sm hover:bg-gray-500"
+                <a
+                  href="#"
+                  class="block py-2 px-3 rounded-sm hover:text-gray-500"
                   >home</a
                 >
               </li>
               <li class="md:inline-block">
-                <a href="#" class="block py-2 px-3 rounded-sm hover:bg-gray-500"
+                <a
+                  href="#"
+                  class="block py-2 px-3 rounded-sm hover:text-gray-500"
                   >about</a
                 >
               </li>
               <li class="md:inline-block">
-                <a href="#" class="block py-2 px-3 rounded-sm hover:bg-gray-500"
+                <a
+                  href="#"
+                  class="block py-2 px-3 rounded-sm hover:text-gray-500"
                   >contact</a
                 >
               </li>
@@ -88,7 +94,7 @@
 
     <section
       id="home"
-      class="bg-salmon-pink text-white min-h-screen px-10 md:px-20 py-20 content-center overflow-hidden"
+      class="bg-light-salmon dark:bg-dark-salmon text-black dark:text-white min-h-screen px-10 md:px-20 py-20 content-center overflow-hidden"
     >
       <h2 class="text-2xl md:text-4xl font-extrabold flex pb-10">
         Recent Posts
@@ -166,7 +172,7 @@
         <span class="text-lg font-bold flex justify-center"
           ><a
             href="#blog"
-            class="border rounded-full bg-olive-green hover:bg-lime-700 px-4 py-2"
+            class="rounded-full underline text-black dark:text-white hover:text-white hover:bg-salmon px-4 py-2"
             >more posts</a
           ></span
         >
@@ -177,7 +183,7 @@
 
     <section
       id="about"
-      class="bg-olive-green min-h-screen min-w-screen text-white py-20 px-10 md:px-20 content-center"
+      class="bg-light-olive dark:bg-dark-olive min-h-screen min-w-screen text-black dark:text-white py-20 px-10 md:px-20 content-center"
     >
       <div class="about-container flex flex-col">
         <div class="about-row reveal flex flex-col md:flex-row">
@@ -220,12 +226,12 @@
 
     <section
       id="contact"
-      class="bg-salmon-pink min-h-screen min-w-screen text-white py-20 px-10 md:px-20 content-center"
+      class="bg-light-salmon dark:bg-dark-salmon min-h-screen min-w-screen text-black dark:text-white py-20 px-10 md:px-20 content-center"
     >
       <!-- Pop up email subscribtion modified from https://medium.com/@francesco.saviano87/how-to-build-a-newsletter-signup-modal-popup-using-html-css-and-javascript-828447b7d163 -->
       <div
         id="modal"
-        class="modal fixed z-5 top-0 left-0 right-0 w-screen h-screen backdrop-blur-md py-20 px-10 md:p-30 text-black content-center justify-center hidden"
+        class="modal fixed z-5 top-0 left-0 right-0 w-screen h-screen backdrop-blur-md py-20 px-10 md:p-30 text-black dark:text-white content-center justify-center hidden"
       >
         <div
           class="modal-content bg-white p-5 md:p-10 rounded-xl text-center shadow-lg w-auto max-w-200 h-fit animate-fade-in"
@@ -246,14 +252,14 @@
             />
             <button
               type="submit"
-              class="submit-btn py-5 px-10 bg-olive-green hover:bg-lime-700 rounded-md cursor-pointer text-md"
+              class="submit-btn py-5 px-10 bg-light-olive dark:bg-dark-olive hover:bg-olive rounded-md cursor-pointer text-md"
             >
               Subscribe Now 🚀
             </button>
           </form>
 
           <button
-            class="close-modal-btn mt-5 py-5 px-10 bg-salmon-pink hover:bg-rose-400 rounded-md cursor-pointer text-md"
+            class="close-modal-btn mt-5 py-5 px-10 bg-light-salmon dark:bg-dark-salmon hover:bg-salmon rounded-md cursor-pointer text-md"
           >
             Close
           </button>
@@ -265,7 +271,7 @@
           class="recent-posts-grid-container reveal justify-items-center text-center grid grid-cols-1 md:grid-cols-2 gap-10"
         >
           <div
-            class="grid-item grid gap-4 justify-items-center p-10 rounded-xl text-white text-center hover:bg-olive-green/85"
+            class="grid-item grid gap-4 justify-items-center p-10 rounded-xl text-black dark:text-white text-center hover:bg-salmon hover:text-white"
           >
             <a
               href="https://www.linkedin.com/in/william-bennatt-243970174"
@@ -286,7 +292,7 @@
           >
             <button
               id="openModal"
-              class="open-modal-btn p-12 max-h-45 border rounded-full bg-olive-green hover:bg-lime-700 text-xl cursor-pointer"
+              class="open-modal-btn p-12 max-h-45 rounded-full underline bg-salmon hover:bg-salmon hover:text-white hover:border hover:border-white text-xl cursor-pointer"
             >
               Subscribe to my newsletter!
             </button>
@@ -299,41 +305,25 @@
 
     <section
       id="footer-section"
-      class="box-border bg-olive-green min-w-screen text-white flex content-center justify-center"
+      class="box-border bg-light-olive dark:bg-dark-olive min-w-screen text-black dark:text-white flex content-center justify-center"
     >
       <div
-        class="footer-row box-border bg-olive-green w-4/5 flex flex-row justify-between py-[1%] px-0"
+        class="footer-row box-border bg-light-olive dark:bg-dark-olive w-4/5 flex flex-row justify-between py-[1%] px-0"
       >
         <p>Copyright &copy; William Bennatt 2025</p>
         <div class="footer-nav-links flex justify-between hidden md:block">
           <ul class="list-none">
             <li class="inline-block pr-10">
-              <a
-                href="#home"
-                class="transition duration-400 hover:text-gray-300"
-                >will or won't</a
-              >
+              <a href="#home" class="hover:text-gray-500">will or won't</a>
             </li>
             <li class="inline-block pr-10">
-              <a
-                href="#blog"
-                class="transition duration-400 hover:text-gray-300"
-                >blog</a
-              >
+              <a href="#blog" class="hover:text-gray-500">blog</a>
             </li>
             <li class="inline-block pr-10">
-              <a
-                href="#about"
-                class="transition duration-400 hover:text-gray-300"
-                >about</a
-              >
+              <a href="#about" class="hover:text-gray-500">about</a>
             </li>
             <li class="inline-block pr-10">
-              <a
-                href="#contact"
-                class="transition duration-400 hover:text-gray-300"
-                >contact</a
-              >
+              <a href="#contact" class="hover:text-gray-500">contact</a>
             </li>
           </ul>
         </div>

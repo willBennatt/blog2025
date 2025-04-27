@@ -10,8 +10,12 @@ When deploying, run:
 @import "tailwindcss";
 
 @theme {
-  --color-olive-green: #b1d27d;
-  --color-salmon-pink: #ff7e70;
+  --color-light-olive: #f2ffd9;
+  --color-olive: #b1d27d;
+  --color-dark-olive: #1a231b;
+  --color-light-salmon: #ffe0dd;
+  --color-salmon: #ff7e70;
+  --color-dark-salmon: #2b1b1b;
   --font-poppins: Poppins, sans-serif;
   --animate-fade-in: fadeIn 0.5s ease;
 

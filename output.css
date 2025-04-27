@@ -6,10 +6,7 @@
     'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
-    --color-lime-700: oklch(0.532 0.157 131.589);
-    --color-rose-400: oklch(0.712 0.194 13.428);
     --color-gray-200: oklch(0.928 0.006 264.531);
-    --color-gray-300: oklch(0.872 0.01 258.338);
     --color-gray-500: oklch(0.551 0.027 264.364);
     --color-black: #000;
     --color-white: #fff;
@@ -38,8 +35,12 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-olive-green: #b1d27d;
-    --color-salmon-pink: #ff7e70;
+    --color-light-olive: #f2ffd9;
+    --color-olive: #b1d27d;
+    --color-dark-olive: #1a231b;
+    --color-light-salmon: #ffe0dd;
+    --color-salmon: #ff7e70;
+    --color-dark-salmon: #2b1b1b;
     --animate-fade-in: fadeIn 0.5s ease;
   }
 }
@@ -372,10 +373,6 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -387,11 +384,14 @@
   .border-gray-200 {
     border-color: var(--color-gray-200);
   }
-  .bg-olive-green {
-    background-color: var(--color-olive-green);
+  .bg-light-olive {
+    background-color: var(--color-light-olive);
   }
-  .bg-salmon-pink {
-    background-color: var(--color-salmon-pink);
+  .bg-light-salmon {
+    background-color: var(--color-light-salmon);
+  }
+  .bg-salmon {
+    background-color: var(--color-salmon);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -488,8 +488,8 @@
   .text-black {
     color: var(--color-black);
   }
-  .text-white {
-    color: var(--color-white);
+  .underline {
+    text-decoration-line: underline;
   }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -510,10 +510,6 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .duration-400 {
-    --tw-duration: 400ms;
-    transition-duration: 400ms;
-  }
   .duration-500 {
     --tw-duration: 500ms;
     transition-duration: 500ms;
@@ -526,6 +522,21 @@
       }
     }
   }
+  .hover\:border {
+    &:hover {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 1px;
+      }
+    }
+  }
+  .hover\:border-white {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-white);
+      }
+    }
+  }
   .hover\:bg-gray-500 {
     &:hover {
       @media (hover: hover) {
@@ -533,31 +544,17 @@
       }
     }
   }
-  .hover\:bg-lime-700 {
+  .hover\:bg-olive {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-lime-700);
+        background-color: var(--color-olive);
       }
     }
   }
-  .hover\:bg-olive-green\/85 {
+  .hover\:bg-salmon {
     &:hover {
       @media (hover: hover) {
-        background-color: color-mix(in oklab, var(--color-olive-green) 85%, transparent);
-      }
-    }
-  }
-  .hover\:bg-rose-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-rose-400);
-      }
-    }
-  }
-  .hover\:text-gray-300 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-gray-300);
+        background-color: var(--color-salmon);
       }
     }
   }
@@ -565,6 +562,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-gray-500);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
       }
     }
   }
@@ -714,6 +718,21 @@
       :where(& > :not(:last-child)) {
         --tw-space-x-reverse: 1;
       }
+    }
+  }
+  .dark\:bg-dark-olive {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-dark-olive);
+    }
+  }
+  .dark\:bg-dark-salmon {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-dark-salmon);
+    }
+  }
+  .dark\:text-white {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
     }
   }
 }
