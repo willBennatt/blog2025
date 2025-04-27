@@ -28,3 +28,40 @@ When deploying, run:
 [hidden] {
   display: none !important;
 }
+
+/* Custom Scroll */
+::-webkit-scrollbar {
+  width: 10px;
+
+  background-color: rgba(141, 198, 245, 0);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-salmon-pink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(240, 240, 240);
+  border-radius: 10px;
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #686868;
+}
+
+/*
+Reveal animation for each section while scrolling. 
+Taken from https://medium.com/@glen.gracieux/building-a-simple-html-css-js-website-9cc04a8bd761
+*/
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 800ms all ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
