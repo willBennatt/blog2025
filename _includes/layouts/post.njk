@@ -2,40 +2,60 @@
 layout: layouts/base.njk
 ---
 {# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
-{# <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
-<style>{% include "css/prism-diff.css" %}</style> #}
-<h1 class="py-20">{{ title }}</h1>
-
-<ul class="post-metadata">
-	<li>
-		<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-	</li>
-	{%- for tag in tags | filterTagList %}
-		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-		<li>
-			<a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
-			{%- if not loop.last %}, {% endif %}
+<style>
+	{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
+</style>
+<style>
+	{% include "css/prism-diff.css" %}
+</style>
+<style>
+	{% include "css/post.css" %}
+</style>
+<script type="module">
+	{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}
+</script>
+<section class="bg-white dark:bg-dark-salmon text-black dark:text-white min-h-screen px-15 md:px-75 pt-25 pb-10">
+	<h1 class="text-4xl font-semibold mb-6">{{ title }}</h1>
+	<ul class="inline-flex flex-wrap gap-1 mb-5">
+		<li class="mr-10">
+			<time class="text-lg" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 		</li>
-	{%- endfor %}
-</ul>
+		{%- for tag in tags | filterTagList %}
+			{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+			<li class="inline-flex justify-center justify-items-center">
+				<a href="{{ tagUrl }}" class="text-lg capitalize text-center underline decoration-salmon hover:text-gray-500">
+					<em>{{ tag }}</em>
+				</a>
+				{%- if not loop.last %}, {% endif %}
+			</li>
+		{%- endfor %}
+	</ul>
 
-{{ content | safe }}
+	<div class="post-content text-base pb-5">
+		<heading-anchors>
+			{{ content | safe }}
+		</heading-anchors>
+	</div>
 
-{%- if collections.posts %}
-	{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-	{%- set nextPost = collections.posts | getNextCollectionItem %}
-	{%- if nextPost or previousPost %}
-		<ul class="links-nextprev">
-			{%- if previousPost %}
-				<li class="links-nextprev-prev">← Previous<br>
-					<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-				</li>
-			{% endif %}
-			{%- if nextPost %}
-				<li class="links-nextprev-next">Next →<br>
-					<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-				</li>
-			{% endif %}
-		</ul>
+	{%- if collections.posts %}
+		{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+		{%- set nextPost = collections.posts | getNextCollectionItem %}
+		{%- if nextPost or previousPost %}
+			<ul class="links-nextprev flex justify-between gap-y-0.5 gap-x-1 pb-1 pt-5" style="border-top: 1px dashed var(--color-gray-500);">
+				{%- if previousPost %}
+					<li class="links-nextprev-prev grow">← Previous<br>
+						<a class="underline decoration-salmon" href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+					</li>
+				{% endif %}
+				{%- if nextPost %}
+					<li class="links-nextprev-next grow text-right">Next →<br>
+						<a class="text-right underline decoration-salmon" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+					</li>
+				{% endif %}
+			</ul>
+		{%- endif %}
 	{%- endif %}
-{%- endif %}
+
+</section>
+
+<hr class="text-gray-100 dark:text-white"/>
