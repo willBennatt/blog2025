@@ -1,0 +1,171 @@
+---js
+const numberOfLatestPostsToShow = 3;
+---
+
+<!-- Landing Section  -->
+
+<section
+      id="home"
+      class="bg-light-salmon dark:bg-dark-salmon text-black dark:text-white min-h-screen px-10 md:px-20 py-20 content-center overflow-hidden"
+    >
+	<h2 class="text-2xl md:text-4xl font-bold flex pb-10">Recent Posts</h2>
+	<!-- followed example from https://flowbite.com/docs/components/gallery/ -->
+	<div class="recent-posts-grid-wrapper w-full">
+		<div
+          class="recent-posts-grid-container justify-items-center text-center grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20"
+        >
+			{% set postsCount = collections.posts | length %}
+			{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+			{% set postslistCounter = postsCount %}
+			{%- for post in postslist | reverse %}
+				<div
+            class="grid-item grid gap-4 justify-items-center transition duration-500 hover:-translate-y-10"
+          >
+					<a href="{{ post.url }}" class="">
+						<div class="flex flex-col items-center justify-items-center">
+							{% if post.data.image %}
+								<img
+                  src="{{ post.data.image.src }}"
+                  alt="{{ post.data.image.alt }}"
+                  class="h-32 w-32 md:h-72 md:w-64 object-cover rounded-lg"
+/>
+							{% endif %}
+							<span class="text-lg md:text-xl font-medium"
+                  >
+								{% if post.data.title %}{{ post.data.title }}
+								{% else %}
+									<code>{{ post.url }}</code>
+								{% endif %}
+							</span
+                >
+							<time class="text-sm font-sm" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+							{% if post.data.description %}
+								<p>
+									{{ post.data.description }}
+								</p>
+							{% endif %}
+
+						</div>
+					</a>
+				</div>
+
+			{%- endfor %}
+		</div>
+	</div>
+	<div class="w-full justify-items-center pt-10">
+		<span class="text-lg font-bold flex justify-center"
+          >
+			{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+			<a
+            href="blog.njk"
+            class="rounded-full underline text-black dark:text-white hover:text-white hover:bg-salmon px-4 py-2"
+            >
+				{% if morePosts > 0 %}{{morePosts}}
+				{% endif %}more post{% if morePosts != 1 %}s{% endif %}
+			</a
+          >
+		</span
+        >
+	</div>
+</section>
+
+<!-- About -->
+
+<section
+      id="about"
+      class="bg-light-olive dark:bg-dark-olive min-h-screen min-w-screen text-black dark:text-white py-20 px-10 md:px-20 content-center"
+    >
+	<div class="about-container flex flex-col">
+		<div class="about-row reveal flex flex-col md:flex-row">
+			<div class="about-col py-5 md:py-10 md:px-10 content-center">
+				<h2 class="text-2xl md:text-4xl font-bold flex pb-5 md:pb-10">
+              About Me
+            </h2>
+				<img
+              src="./index/selfie.png"
+              alt="selfie"
+              class="h-auto max-w-full rounded-lg pb-5 md:pb-10"
+/>
+				<p class="md:text-lg">
+              My name is Will. On this blog, I write about things I've done and
+              whether I <b>
+						<em>will</em>
+					</b> or <b>
+						<em>won't</em>
+					</b> do them
+              again.
+            </p>
+			</div>
+			<div class="about-col py-5 md:py-10 md:px-10 content-center">
+				<p class="md:text-lg">
+              I like all things outdoors and often write about my climbing,
+              skiing, or hiking trips. I lived in Seattle for almost 8 years and
+              toured all over the Cascade mountains, but I moved to Munich,
+              Germany, in 2025 where I am now exploring the Alps.
+            </p>
+			</div>
+			<div class="about-col py-5 md:py-10 md:px-10 content-center">
+				<p class="md:text-lg">
+              You might find the occasional post about the tech industry or
+              software engineering as well &mdash; I worked at Amazon Web
+              Services for three and a half years and enjoy coding small
+              projects in my free time, like this website.
+            </p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Contact Section -->
+
+<section
+      id="contact"
+      class="bg-light-salmon dark:bg-dark-salmon min-h-screen min-w-screen text-black dark:text-white py-20 px-10 md:px-20 content-center"
+    >
+
+	<h2 class="text-2xl md:text-4xl font-bold flex pb-10">Contact</h2>
+	<div class="recent-posts-grid-wrapper w-full">
+		<div
+          class="recent-posts-grid-container reveal justify-items-center text-center grid grid-cols-1 md:grid-cols-2 gap-10"
+        >
+			<div
+            class="grid-item grid gap-4 justify-items-center p-10 rounded-xl text-black dark:text-white text-center hover:bg-salmon hover:text-white"
+          >
+				<a
+              href="https://www.linkedin.com/in/william-bennatt-243970174"
+              target="_blank"
+              rel="noopener noreferrer"
+              class=""
+            >
+					<img
+                src="./index/icons8-linkedin-144.png"
+                alt="LinkedIn"
+                class="h-32 w-32 md:h-56 md:w-56 object-cover pb-5"
+/>
+				</a>
+				<p class="text-xl">Find me on LinkedIn</p>
+			</div>
+			<div
+            class="grid-item grid gap-4 justify-items-center p-10 rounded-xl text-black dark:text-white text-center hover:bg-salmon hover:text-white"
+          >
+				<a
+              href="https://github.com/willBennatt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class=""
+            >
+					<img
+                src="./index/github-mark.png"
+                alt="GitHub"
+                class="h-32 w-32 md:h-56 md:w-56 object-cover pb-5"
+/>
+				</a>
+				<p class="text-xl">Find me on GitHub</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript">
+	{% include "javascript/reveal.js" %}
+</script>

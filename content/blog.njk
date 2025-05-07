@@ -1,0 +1,43 @@
+<div
+      id="filterBtnContainer"
+      class="flex items-center justify-center pt-25 pb-4 md:pb-8 flex-wrap"
+    >
+	<button
+        type="button"
+        class="filterBtn active-btn"
+      >
+        All
+      </button>
+	{% for tag in collections | getKeys | filterTagList | sortAlphabetically %}
+		<button
+        type="button"
+        class="filterBtn capitalize inactive-btn"
+      >
+			{{ tag }}
+		</button>
+	{% endfor %}
+</div>
+
+<div class="columns-1 md:columns-3 gap-4 grow">
+	{% set postslist = collections.posts %}
+	{%- for post in postslist | reverse %}
+		<div class="filterable mb-4 flex flex-col{%- for tag in post.data.tags | filterTagList %} {{ tag }}{%- endfor %}">
+			<a href="{{ post.url }}" class="">
+				<img
+          class="h-auto max-w-full rounded-lg"
+          src="{{ post.data.image.src }}"
+          alt="{{ post.data.image.alt }}"
+/>
+				<span class="text-lg md:text-xl font-medium"
+                  >{{ post.data.title }}</span
+                >
+				<time class="text-sm font-sm" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+				<p>{{ post.data.description }}</p>
+			</a>
+		</div>
+	{%- endfor %}
+</div>
+
+<script type="text/javascript">
+	{% include "javascript/filterByTag.js" %}
+</script>

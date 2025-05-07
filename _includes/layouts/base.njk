@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}" class="font-sans scroll-smooth">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ title or metadata.title }}</title>
+		<link rel="icon" type="image/x-icon" href="/icon/favicon.ico"/>
+		<meta name="description" content="{{ description or metadata.description }}">
+
+		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
+		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+
+		{#-
+		Plain-text bundles are provided via the `eleventy-plugin-bundle` plugin:
+		1. CSS:
+			* Add to a per-page bundle using `{% css %}{% endcss %}`
+			* Retrieve bundle content using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
+		2. Or for JavaScript:
+			* Add to a per-page bundle using `{% js %}{% endjs %}`
+			* Retrieve via `{% getBundle "js" %}` or `{% getBundleFileUrl "js" %}`
+		3. Learn more: https://github.com/11ty/eleventy-plugin-bundle
+		#}
+
+		{#- Add the contents of a file to the bundle #}
+		<style>
+			{% include "css/output.css" %}
+		</style>
+		{#- Or you can add from node_modules #}
+		{# <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style> #}
+
+		{#- Render the CSS bundle using inlined CSS (for the fastest site performance in production) #}
+		<style>
+			{% getBundle "css" %}
+		</style>
+		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
+		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
+
+		<script type="text/javascript">
+			{% include "javascript/navbar.js" %}
+		</script>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header class="fixed top-0 right-0 left-0 w-screen z-500 backdrop-blur-lg">
+			<!-- nav bar adapted from https://flowbite.com/docs/components/navbar/-->
+			<nav class="sticky text-black dark:text-white border-gray-200">
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<div
+          class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4 md:flex-nowrap md:box-border md:px-[6%]"
+        >
+					<button
+            data-collapse-toggle="navbar-hamburger"
+            type="button"
+            class="flex items-center justify-center p-2 w-10 h-10 text-sm text-black dark:text-white rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
+            aria-controls="navbar-hamburger"
+            aria-expanded="false"
+            onclick="toggleMenu()"
+          >
+						<span class="sr-only">Open main menu</span>
+						<svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+							<path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+/>
+						</svg>
+					</button>
+					<a
+            href="/"
+            class="hidden sm:inline-flex items-center space-x-3 rtl:space-x-reverse"
+          >
+						<span
+              class="self-center text-lg md:text-2xl font-semibold whitespace-nowrap hover:text-gray-500"
+              >will or won't</span
+            >
+					</a>
+
+					<div class="w-full md:flex md:w-auto hidden" id="navbar-hamburger">
+						<ul
+              class="flex flex-col md:flex-row font-medium mt-4 rounded-lg text-black dark:text-white"
+            >
+							<li class="md:inline-block">
+								<a
+                  href="/#home"
+                  class="block py-2 px-3 rounded-sm hover:text-gray-500"
+                  >home</a
+                >
+							</li>
+							<li class="md:inline-block">
+								<a
+                  href="blog.njk"
+                  class="block py-2 px-3 rounded-sm hover:text-gray-500"
+                  >blog</a
+                >
+							</li>
+							<li class="md:inline-block">
+								<a
+                  href="/#about"
+                  class="block py-2 px-3 rounded-sm hover:text-gray-500"
+                  >about</a
+                >
+							</li>
+							<li class="md:inline-block">
+								<a
+                  href="/#contact"
+                  class="block py-2 px-3 rounded-sm hover:text-gray-500"
+                  >contact</a
+                >
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main id="skip" class="min-h-screen">
+			{{ content | safe }}
+		</main>
+
+		<footer class="box-border bg-light-olive dark:bg-dark-olive min-w-screen mt-auto text-black dark:text-white flex content-center justify-center">
+			<div
+        class="box-border bg-light-olive dark:bg-dark-olive w-4/5 flex flex-row justify-between py-[1%] px-0"
+      >
+				<p>Copyright &copy; William Bennatt 2025</p>
+				<div class="justify-between hidden md:block">
+					<ul class="list-none">
+						<li class="inline-block pr-10">
+							<a href="#home" class="hover:text-gray-500">will or won't</a>
+						</li>
+						<li class="inline-block pr-10">
+							<a href="#blog" class="hover:text-gray-500">blog</a>
+						</li>
+						<li class="inline-block pr-10">
+							<a href="#about" class="hover:text-gray-500">about</a>
+						</li>
+						<li class="inline-block pr-10">
+							<a href="#contact" class="hover:text-gray-500">contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+	</body>
+</html>
