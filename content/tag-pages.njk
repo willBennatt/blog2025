@@ -17,9 +17,26 @@ const eleventyComputed = {
 	}
 };
 ---
-<h1>Tagged “{{ tag }}”</h1>
+<section class="bg-light-olive dark:bg-dark-olive text-black dark:text-white min-h-screen px-15 md:px-75 pt-25 pb-10" >
 
-{% set postslist = collections[ tag ] %}
-{% include "postslist.njk" %}
+	<h1 class="text-4xl font-semibold mb-6">Tagged “{{ tag }}”</h1>
 
-<p>See <a href="tags.njk">all tags</a>.</p>
+	{% set postslist = collections[tag] %}
+	<ol reversed class="list-decimal pl-8" style="--postlist-index: {{ (postslistCounter or postslist.length) + 1 }}">
+		{%- for post in postslist | reverse %}
+			<li class="mb-1 postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+				<a href="{{ post.url }}" class="text-lg underline decoration-salmon hover:text-gray-500">
+					{% if post.data.title %}{{ post.data.title }}
+					{% else %}
+						<code>{{ post.url }}</code>
+					{% endif %}
+				</a>
+				<time class="text-sm ml-4" datetime="{{ post.date | htmlDateString }}">
+					<em>{{ post.date | readableDate("LLLL yyyy") }}</em>
+				</time>
+			</li>
+		{%- endfor %}
+	</ol>
+
+	<p class="mt-5">See <a class="underline decoration-salmon hover:text-gray-500" href="tags.njk">all tags</a>.</p>
+</section>

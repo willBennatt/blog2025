@@ -1,8 +1,12 @@
-<h1>Tags</h1>
+<section class="bg-light-olive dark:bg-dark-olive text-black dark:text-white min-h-screen px-15 md:px-75 pt-25 pb-10" >
+	<h1 class="text-4xl font-semibold mb-6">Tags</h1>
 
-<ul>
-{% for tag in collections | getKeys | filterTagList | sortAlphabetically %}
-	{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
-{% endfor %}
-</ul>
+	<ul class="list-disc pl-8">
+		{% for tag in collections | getKeys | filterTagList | sortAlphabetically %}
+			{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+			<li>
+				<a href="{{ tagUrl }}" class="text-lg capitalize text-center underline decoration-salmon hover:text-gray-500">{{ tag }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</section>
