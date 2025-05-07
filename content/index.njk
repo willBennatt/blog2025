@@ -6,7 +6,7 @@ const numberOfLatestPostsToShow = 3;
 
 <section
       id="home"
-      class="bg-light-salmon dark:bg-dark-salmon text-black dark:text-white min-h-screen px-10 md:px-20 py-20 content-center overflow-hidden"
+      class="bg-white text-black dark:bg-dark-salmon dark:text-white min-h-screen px-10 md:px-20 py-20 content-center overflow-hidden"
     >
 	<h2 class="text-2xl md:text-4xl font-bold flex pb-10">Recent Posts</h2>
 	<!-- followed example from https://flowbite.com/docs/components/gallery/ -->
@@ -27,7 +27,7 @@ const numberOfLatestPostsToShow = 3;
 								<img
                   src="{{ post.data.image.src }}"
                   alt="{{ post.data.image.alt }}"
-                  class="h-32 w-32 md:h-72 md:w-64 object-cover rounded-lg"
+                  class="h-42 w-56 md:h-72 md:w-64 object-cover rounded-lg"
 />
 							{% endif %}
 							<span class="text-lg md:text-xl font-medium"
@@ -58,7 +58,7 @@ const numberOfLatestPostsToShow = 3;
 			{% set morePosts = postsCount - numberOfLatestPostsToShow %}
 			<a
             href="blog.njk"
-            class="rounded-full underline text-black dark:text-white hover:text-white hover:bg-salmon px-4 py-2"
+            class="rounded-full underline decoration-salmon text-black dark:text-white hover:text-white hover:bg-salmon px-4 py-2"
             >
 				{% if morePosts > 0 %}{{morePosts}}
 				{% endif %}more post{% if morePosts != 1 %}s{% endif %}
@@ -68,6 +68,8 @@ const numberOfLatestPostsToShow = 3;
         >
 	</div>
 </section>
+
+<hr class="text-gray-100 dark:text-white"/>
 
 <!-- About -->
 
@@ -116,11 +118,13 @@ const numberOfLatestPostsToShow = 3;
 	</div>
 </section>
 
+<hr class="text-gray-100 dark:text-white"/>
+
 <!-- Contact Section -->
 
 <section
       id="contact"
-      class="bg-light-salmon dark:bg-dark-salmon min-h-screen min-w-screen text-black dark:text-white py-20 px-10 md:px-20 content-center"
+      class="bg-white dark:bg-dark-salmon min-h-screen min-w-screen text-black dark:text-white py-20 px-10 md:px-20 content-center"
     >
 
 	<h2 class="text-2xl md:text-4xl font-bold flex pb-10">Contact</h2>
@@ -129,7 +133,7 @@ const numberOfLatestPostsToShow = 3;
           class="recent-posts-grid-container reveal justify-items-center text-center grid grid-cols-1 md:grid-cols-2 gap-10"
         >
 			<div
-            class="grid-item grid gap-4 justify-items-center p-10 rounded-xl text-black dark:text-white text-center hover:bg-salmon hover:text-white"
+            class="grid-item grid gap-4 justify-items-center p-10 rounded-xl transition duration-500 hover:-translate-y-10 text-black dark:text-white text-center hover:bg-salmon hover:text-white"
           >
 				<a
               href="https://www.linkedin.com/in/william-bennatt-243970174"
@@ -143,10 +147,10 @@ const numberOfLatestPostsToShow = 3;
                 class="h-32 w-32 md:h-56 md:w-56 object-cover pb-5"
 />
 				</a>
-				<p class="text-xl">Find me on LinkedIn</p>
+				<p class="text-xl underline decoration-salmon">Find me on LinkedIn</p>
 			</div>
 			<div
-            class="grid-item grid gap-4 justify-items-center p-10 rounded-xl text-black dark:text-white text-center hover:bg-salmon hover:text-white"
+            class="grid-item grid gap-4 justify-items-center p-10 rounded-xl transition duration-500 hover:-translate-y-10 text-black dark:text-white text-center hover:bg-salmon hover:text-white"
           >
 				<a
               href="https://github.com/willBennatt"
@@ -157,14 +161,16 @@ const numberOfLatestPostsToShow = 3;
 					<img
                 src="./index/github-mark.png"
                 alt="GitHub"
-                class="h-32 w-32 md:h-56 md:w-56 object-cover pb-5"
+                class="h-32 w-32 md:h-56 md:w-56 object-cover pb-5 dark:bg-white dark:rounded-full"
 />
 				</a>
-				<p class="text-xl">Find me on GitHub</p>
+				<p class="text-xl underline decoration-salmon">Find me on GitHub</p>
 			</div>
 		</div>
 	</div>
 </section>
+
+<hr class="text-gray-100 dark:text-white"/>
 
 <script type="text/javascript">
 	{% include "javascript/reveal.js" %}
