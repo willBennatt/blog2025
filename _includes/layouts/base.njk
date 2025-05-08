@@ -91,66 +91,66 @@
 							<li class="md:inline-block">
 								<a
                   href="/#home"
-                  class="block py-2 px-3 mx-1 my-1 md:my-0 rounded-full border border-salmon hover:bg-salmon hover:text-white"
+                  class="block py-2 px-3 mx-1 my-1 md:my-0 rounded-full border border-salmon hover:bg-salmon hover:text-white{% if "/" == page.url or "/index" == page.url %} underline" aria-current="page"{% else %}"{% endif %}
                   >home</a
                 >
 							</li>
 							<li class="md:inline-block">
-								<a
+									<a
                   href="blog.njk"
-                  class="block py-2 px-3 mx-1 my-1 md:my-0 rounded-full border border-salmon hover:bg-salmon hover:text-white"
+                  class="block py-2 px-3 mx-1 my-1 md:my-0 rounded-full border border-salmon hover:bg-salmon hover:text-white{% if "/blog/" == page.url %} underline" aria-current="page"{% else %}"{% endif %}
                   >blog</a
                 >
 							</li>
 							<li class="md:inline-block">
-								<a
+										<a
                   href="/#about"
                   class="block py-2 px-3 mx-1 my-1 md:my-0 rounded-full border border-salmon hover:bg-salmon hover:text-white"
                   >about</a
                 >
-							</li>
-							<li class="md:inline-block">
-								<a
+									</li>
+									<li class="md:inline-block">
+										<a
                   href="/#contact"
                   class="block py-2 px-3 mx-1 my-1 md:my-0 rounded-full border border-salmon hover:bg-salmon hover:text-white"
                   >contact</a
                 >
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</header>
 
-		<main id="skip" class="min-h-screen">
-			{{ content | safe }}
-		</main>
+				<main id="skip" class="min-h-screen">
+					{{ content | safe }}
+				</main>
 
-		<footer class="box-border bg-light-olive dark:bg-dark-olive min-w-screen mt-auto text-black dark:text-white flex content-center justify-center">
-			<div
+				<footer class="box-border bg-light-olive dark:bg-dark-olive min-w-screen mt-auto text-black dark:text-white flex content-center justify-center">
+					<div
         class="box-border bg-light-olive dark:bg-dark-olive w-4/5 flex flex-row justify-between py-[1%] px-0"
       >
-				<p>Copyright &copy; William Bennatt 2025</p>
-				<div class="justify-between hidden md:block">
-					<ul class="list-none">
-						<li class="inline-block pr-10">
-							<a href="#home" class="hover:text-gray-500">will or won't</a>
-						</li>
-						<li class="inline-block pr-10">
-							<a href="#blog" class="hover:text-gray-500">blog</a>
-						</li>
-						<li class="inline-block pr-10">
-							<a href="#about" class="hover:text-gray-500">about</a>
-						</li>
-						<li class="inline-block pr-10">
-							<a href="#contact" class="hover:text-gray-500">contact</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</footer>
+						<p>Copyright &copy; William Bennatt 2025</p>
+						<div class="justify-between hidden md:block">
+							<ul class="list-none">
+								<li class="inline-block pr-10">
+									<a href="#home" class="hover:text-gray-500">will or won't</a>
+								</li>
+								<li class="inline-block pr-10">
+									<a href="#blog" class="hover:text-gray-500">blog</a>
+								</li>
+								<li class="inline-block pr-10">
+									<a href="#about" class="hover:text-gray-500">about</a>
+								</li>
+								<li class="inline-block pr-10">
+									<a href="#contact" class="hover:text-gray-500">contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</footer>
 
-		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
-		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
-	</body>
-</html>
+				<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+				<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+			</body>
+		</html>
