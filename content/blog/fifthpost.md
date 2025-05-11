@@ -6,6 +6,9 @@ const image = {
   alt: "Alt text 4"
 };
 const draft = true;
+const verdict = "will";
+const what = "keep writing blog posts.";
+const why = "It's fun to build new things and put them on the internet!";
 ---
 
 This is a draft post

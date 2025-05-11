@@ -1,6 +1,22 @@
 ---
 layout: layouts/base.njk
 ---
+{#
+Every post using this layout should provide the following data in the frontmatter like this example:
+---
+title: This is the Title.
+description: This is a post on My Blog about win-win survival strategies.
+date: 2018-08-24
+image:
+  src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+  alt: "Alt text 3"
+tags: ["outdoors", "tech"]
+verdict: will
+what: keep writing blog posts.
+why: It's fun to build new things and put them on the internet!
+---
+#}
+
 {# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
 <style>
 	{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
@@ -14,7 +30,7 @@ layout: layouts/base.njk
 <script type="module">
 	{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}
 </script>
-<section class="bg-white dark:bg-dark-salmon text-black dark:text-white min-h-screen px-15 md:px-75 pt-25 pb-10">
+<section class="bg-white dark:bg-dark-salmon text-black dark:text-white min-h-screen px-15 md:px-35 lg:px-55 xl:px-75 pt-25 pb-10">
 	<h1 class="text-4xl font-semibold mb-6">{{ title }}</h1>
 	<ul class="inline-flex flex-wrap gap-1 mb-5">
 		<li class="mr-10">
@@ -31,10 +47,24 @@ layout: layouts/base.njk
 		{%- endfor %}
 	</ul>
 
-	<div class="post-content text-base pb-5">
+	<div class="post-content text-base">
 		<heading-anchors>
 			{{ content | safe }}
 		</heading-anchors>
+	</div>
+
+	<div class="relative border-solid border-2 border-olive bg-gray-100 dark:bg-gray-900 p-0 mb-10 mt-15">
+		<div class="bg-light-salmon dark:bg-salmon z-5 absolute -top-6 left-5 block w-50 text-center p-2 border-solid border-2 border-olive text-xl">
+			<b>Will</b> or <b>Won't</b>?</div>
+		<div class="pt-9 pb-5 px-6">
+			<div>
+				<span class="text-lg font-medium">
+					Verdict:</span> I <b>{{ verdict | trim }}</b>
+				{{ what | trim }}</div>
+			<div>
+				<span class="text-lg font-medium">Why:</span>
+				{{ why }}</div>
+		</div>
 	</div>
 
 	{%- if collections.posts %}

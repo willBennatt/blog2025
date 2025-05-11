@@ -62,5 +62,30 @@
 }
 .post-content a {
 	text-decoration: underline;
-	text-decoration-color: #ff7e70;
+	text-decoration-color: var(--color-salmon);
+}
+
+.post-content a:hover,
+.post-content a:active {
+	color: var(--color-gray-500);
+}
+
+.post-content ul {
+	display: block;
+	list-style-type: disc;
+	margin-top: 1em;
+	margin-bottom: 1 em;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 40px;
+}
+
+.post-content ol {
+	display: block;
+	list-style-type: decimal;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 40px;
 }

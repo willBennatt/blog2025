@@ -42,4 +42,8 @@ export default function (eleventyConfig) {
 	eleventyConfig.addFilter("sortAlphabetically", (strings) =>
 		(strings || []).sort((b, a) => b.localeCompare(a))
 	);
+
+	eleventyConfig.addFilter("trim", (s) => {
+		return (s || "").trim();
+	});
 }

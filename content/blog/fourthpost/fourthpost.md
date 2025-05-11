@@ -6,6 +6,9 @@ image:
   src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
   alt: "Alt text 4"
 tags: tech
+verdict: will
+what: keep writing blog posts.
+why: It's fun to build new things and put them on the internet!
 ---
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
