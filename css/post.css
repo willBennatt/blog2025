@@ -74,7 +74,7 @@
 	display: block;
 	list-style-type: disc;
 	margin-top: 1em;
-	margin-bottom: 1 em;
+	margin-bottom: 1em;
 	margin-left: 0;
 	margin-right: 0;
 	padding-left: 40px;
@@ -88,4 +88,18 @@
 	margin-left: 0;
 	margin-right: 0;
 	padding-left: 40px;
+}
+
+.post-content figure {
+	display: table;
+}
+
+.post-content figure figcaption {
+	display: table-caption;
+	caption-side: bottom;
+	color: var(--color-gray-500);
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: var(--text-sm);
+	text-align: center;
 }

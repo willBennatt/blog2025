@@ -3,12 +3,25 @@ import {
 	InputPathToUrlTransformPlugin,
 	HtmlBasePlugin,
 } from "@11ty/eleventy";
-import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-
+// For more featured markdown processing and plugins: https://github.com/markdown-it/markdown-it
+import markdownit from "markdown-it";
+// For adding captions to images in markdown: https://github.com/Antonio-Laguna/markdown-it-image-figures
+import imageFiguresPlugin from "markdown-it-image-figures";
+// For adding sizing to markdown images like "![image =300x200](https://example.com/image.png =300x200)"
+import { imgSize } from "@mdit/plugin-img-size";
 import pluginFilters from "./_config/filters.js";
+
+const mdLib = markdownit({
+	html: false,
+})
+	.use(imageFiguresPlugin, {
+		dataType: true,
+		figcaption: "title",
+	})
+	.use(imgSize);
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
@@ -21,11 +34,9 @@ export default async function (eleventyConfig) {
 
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
-	eleventyConfig
-		.addPassthroughCopy({
-			"./public/": "/",
-		})
-		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
+	eleventyConfig.addPassthroughCopy({
+		"./public/": "/",
+	});
 
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
@@ -52,6 +63,8 @@ export default async function (eleventyConfig) {
 		bundleHtmlContentFromSelector: "script",
 	});
 
+	eleventyConfig.setLibrary("md", mdLib);
+
 	// Official plugins
 	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
 		preAttributes: { tabindex: 0 },
@@ -59,31 +72,6 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
-
-	eleventyConfig.addPlugin(feedPlugin, {
-		type: "atom", // or "rss", "json"
-		outputPath: "/feed/feed.xml",
-		stylesheet: "pretty-atom-feed.xsl",
-		templateData: {
-			eleventyNavigation: {
-				key: "Feed",
-				order: 4,
-			},
-		},
-		collection: {
-			name: "posts",
-			limit: 10,
-		},
-		metadata: {
-			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
-			author: {
-				name: "Your Name",
-			},
-		},
-	});
 
 	// Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {

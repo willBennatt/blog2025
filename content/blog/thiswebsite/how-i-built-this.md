@@ -23,7 +23,7 @@ Although a lot of that usage is thanks to website-builder platforms like WordPre
 
 I never had a vendetta against PHP, but I have always used my website more as a fun side project to learn new things than as an actual blog (which you can probably tell based on how few posts I have), so I eventually tore down my old site and decided to rebuild it with a modern tech stack.
 
-![my first website](./first_website.png)
+![screenshot of my first website =600x](./first-website-screenshot.png "My first website")
 
 ## Other Iterations
 
@@ -56,7 +56,7 @@ Cons:
 - **Not user-friendly** - most static site-generator frameworks require some development experience to use and lack pre-built templates, so they are not as easy as CMS tools like WordPress.
 - **No dynamic content** - static sites don't have a backend server, so they can't do anything dynamic like updating databases or showing different content to different users.
 
-Most sites can't be static because they need to do a lot of stuff for their users, but for simple things like documentation or blogs (like this one), it's perfect.
+Most sites can't be static because they need to do a lot of stuff for their users, but for simple things like documentation or blogs (like this one), it's perfect. You can see all the code for this blog on my [Github](https://github.com/willBennatt/blog2025).
 
 ## Final Thoughts
 
