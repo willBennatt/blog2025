@@ -29,6 +29,7 @@
           class="h-auto max-w-full rounded-lg"
           src="{{ post.data.image.src }}"
           alt="{{ post.data.image.alt }}"
+		  {% if post.data.image.title %} title="{{ post.data.image.title }}"{% endif %}
 />
 						<span class="text-lg md:text-xl font-medium break-inside-avoid-column"
                   >{{ post.data.title }}</span

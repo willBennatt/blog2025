@@ -3,8 +3,9 @@ title: How I Built This Website
 description: The history and evolution of this website, from PHP to SSG.
 date: 2025-05-09
 image:
-  src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-  alt: "Alt text 3"
+  src: "blog/thiswebsite/safar-safarov-koOdUvfGr4c-unsplash.jpg"
+  alt: "computer screens with code displayed"
+  title: "Photo by Safar Safarov on Unsplash"
 tags: ["tech"]
 verdict: will
 what: keep updating this website.
