@@ -1,7 +1,7 @@
 {
-	"name": "eleventy-base-blog",
-	"version": "9.0.0",
-	"description": "A starter repository for a blog web site using the Eleventy site generator.",
+	"name": "will-or-wont-blog",
+	"version": "1.0.0",
+	"description": "A blog built using the Eleventy static-site generator.",
 	"type": "module",
 	"scripts": {
 		"build": "npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css; npx @11ty/eleventy",
@@ -17,25 +17,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/11ty/eleventy-base-blog.git"
+		"url": "git://github.com/willBennatt/blog2025"
 	},
 	"author": {
-		"name": "Zach Leatherman",
-		"email": "zachleatherman@gmail.com",
-		"url": "https://zachleat.com/"
+		"name": "William Bennatt"
 	},
-	"license": "MIT",
 	"engines": {
 		"node": ">=18"
 	},
-	"funding": {
-		"type": "opencollective",
-		"url": "https://opencollective.com/11ty"
-	},
-	"bugs": {
-		"url": "https://github.com/11ty/eleventy-base-blog/issues"
-	},
-	"homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+	"homepage": "https://github.com/willBennatt/blog2025",
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.0-beta.1",
 		"@11ty/eleventy-img": "^6.0.2",
