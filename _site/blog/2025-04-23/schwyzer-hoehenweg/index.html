@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en" class="font-sans scroll-smooth">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hiking the Schwyzer Höhenweg (sort of)</title>
+		<link rel="icon" type="image/x-icon" href="/icon/favicon.ico">
+		<meta name="description" content="A short backpacking trip to Schwyz, Switzerland">
+		
+		
+		<style>
+			/*! tailwindcss v4.1.5 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
+    --color-gray-800: oklch(27.8% 0.033 256.848);
+    --color-gray-900: oklch(21% 0.034 264.665);
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --blur-lg: 16px;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --color-light-olive: #f2ffd9;
+    --color-olive: #b1d27d;
+    --color-dark-olive: #1a231b;
+    --color-light-salmon: #ffe0dd;
+    --color-salmon: #ff7e70;
+    --color-dark-salmon: #2b1b1b;
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .static {
+    position: static;
+  }
+  .sticky {
+    position: sticky;
+  }
+  .-top-6 {
+    top: calc(var(--spacing) * -6);
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .left-5 {
+    left: calc(var(--spacing) * 5);
+  }
+  .z-5 {
+    z-index: 5;
+  }
+  .z-500 {
+    z-index: 500;
+  }
+  .m-10 {
+    margin: calc(var(--spacing) * 10);
+  }
+  .mx-1 {
+    margin-inline: calc(var(--spacing) * 1);
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .my-1 {
+    margin-block: calc(var(--spacing) * 1);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-15 {
+    margin-top: calc(var(--spacing) * 15);
+  }
+  .mt-auto {
+    margin-top: auto;
+  }
+  .mr-10 {
+    margin-right: calc(var(--spacing) * 10);
+  }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
+  .ml-4 {
+    margin-left: calc(var(--spacing) * 4);
+  }
+  .box-border {
+    box-sizing: border-box;
+  }
+  .block {
+    display: block;
+  }
+  .contents {
+    display: contents;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
+  }
+  .h-42 {
+    height: calc(var(--spacing) * 42);
+  }
+  .h-auto {
+    height: auto;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-4\/5 {
+    width: calc(4/5 * 100%);
+  }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
+  .w-50 {
+    width: calc(var(--spacing) * 50);
+  }
+  .w-56 {
+    width: calc(var(--spacing) * 56);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .w-screen {
+    width: 100vw;
+  }
+  .max-w-full {
+    max-width: 100%;
+  }
+  .max-w-screen {
+    max-width: 100vw;
+  }
+  .min-w-screen {
+    min-width: 100vw;
+  }
+  .grow {
+    flex-grow: 1;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .list-decimal {
+    list-style-type: decimal;
+  }
+  .list-disc {
+    list-style-type: disc;
+  }
+  .list-none {
+    list-style-type: none;
+  }
+  .columns-1 {
+    columns: 1;
+  }
+  .break-inside-avoid-column {
+    break-inside: avoid-column;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .content-center {
+    align-content: center;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-items-center {
+    justify-items: center;
+  }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .gap-x-1 {
+    column-gap: calc(var(--spacing) * 1);
+  }
+  .space-x-3 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 3) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
+  .gap-y-0\.5 {
+    row-gap: calc(var(--spacing) * 0.5);
+  }
+  .self-center {
+    align-self: center;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-solid {
+    --tw-border-style: solid;
+    border-style: solid;
+  }
+  .border-gray-200 {
+    border-color: var(--color-gray-200);
+  }
+  .border-olive {
+    border-color: var(--color-olive);
+  }
+  .border-salmon {
+    border-color: var(--color-salmon);
+  }
+  .bg-gray-100 {
+    background-color: var(--color-gray-100);
+  }
+  .bg-light-olive {
+    background-color: var(--color-light-olive);
+  }
+  .bg-light-salmon {
+    background-color: var(--color-light-salmon);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
+  }
+  .px-0 {
+    padding-inline: calc(var(--spacing) * 0);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  .px-15 {
+    padding-inline: calc(var(--spacing) * 15);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
+  }
+  .py-\[1\%\] {
+    padding-block: 1%;
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
+  }
+  .pt-9 {
+    padding-top: calc(var(--spacing) * 9);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-25 {
+    padding-top: calc(var(--spacing) * 25);
+  }
+  .pr-10 {
+    padding-right: calc(var(--spacing) * 10);
+  }
+  .pb-1 {
+    padding-bottom: calc(var(--spacing) * 1);
+  }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pb-5 {
+    padding-bottom: calc(var(--spacing) * 5);
+  }
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
+  }
+  .pl-8 {
+    padding-left: calc(var(--spacing) * 8);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-gray-100 {
+    color: var(--color-gray-100);
+  }
+  .capitalize {
+    text-transform: capitalize;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .decoration-salmon {
+    text-decoration-color: var(--color-salmon);
+  }
+  .filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .backdrop-blur-lg {
+    --tw-backdrop-blur: blur(var(--blur-lg));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-500 {
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+  }
+  .hover\:-translate-y-10 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-translate-y: calc(var(--spacing) * -10);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+  .hover\:bg-gray-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-500);
+      }
+    }
+  }
+  .hover\:bg-salmon {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-salmon);
+      }
+    }
+  }
+  .hover\:text-gray-500 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-500);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
+  .focus\:ring-2 {
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:ring-gray-200 {
+    &:focus {
+      --tw-ring-color: var(--color-gray-200);
+    }
+  }
+  .focus\:outline-none {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
+  }
+  .sm\:inline-flex {
+    @media (width >= 40rem) {
+      display: inline-flex;
+    }
+  }
+  .md\:my-0 {
+    @media (width >= 48rem) {
+      margin-block: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:box-border {
+    @media (width >= 48rem) {
+      box-sizing: border-box;
+    }
+  }
+  .md\:block {
+    @media (width >= 48rem) {
+      display: block;
+    }
+  }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
+  .md\:inline-block {
+    @media (width >= 48rem) {
+      display: inline-block;
+    }
+  }
+  .md\:h-56 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 56);
+    }
+  }
+  .md\:h-72 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 72);
+    }
+  }
+  .md\:w-56 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 56);
+    }
+  }
+  .md\:w-64 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 64);
+    }
+  }
+  .md\:w-auto {
+    @media (width >= 48rem) {
+      width: auto;
+    }
+  }
+  .md\:columns-3 {
+    @media (width >= 48rem) {
+      columns: 3;
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-3 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:flex-nowrap {
+    @media (width >= 48rem) {
+      flex-wrap: nowrap;
+    }
+  }
+  .md\:gap-20 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:px-8 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:px-10 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:px-20 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:px-35 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 35);
+    }
+  }
+  .md\:px-75 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 75);
+    }
+  }
+  .md\:px-\[6\%\] {
+    @media (width >= 48rem) {
+      padding-inline: 6%;
+    }
+  }
+  .md\:py-10 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:pb-8 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:pb-10 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:text-2xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .md\:text-4xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
+  }
+  .md\:text-lg {
+    @media (width >= 48rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .md\:text-xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .lg\:px-55 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 55);
+    }
+  }
+  .xl\:px-75 {
+    @media (width >= 80rem) {
+      padding-inline: calc(var(--spacing) * 75);
+    }
+  }
+  .rtl\:space-x-reverse {
+    &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
+      :where(& > :not(:last-child)) {
+        --tw-space-x-reverse: 1;
+      }
+    }
+  }
+  .dark\:rounded-full {
+    @media (prefers-color-scheme: dark) {
+      border-radius: calc(infinity * 1px);
+    }
+  }
+  .dark\:bg-dark-olive {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-dark-olive);
+    }
+  }
+  .dark\:bg-dark-salmon {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-dark-salmon);
+    }
+  }
+  .dark\:bg-gray-900 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-gray-900);
+    }
+  }
+  .dark\:bg-salmon {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-salmon);
+    }
+  }
+  .dark\:bg-white {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-white);
+    }
+  }
+  .dark\:text-white {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
+  }
+}
+[hidden] {
+  display: none !important;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(141, 198, 245, 0);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-salmon-pink);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(240, 240, 240);
+  border-radius: 10px;
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #686868;
+}
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 800ms all ease;
+}
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.active-btn {
+  margin-inline-end: calc(var(--spacing) * 3);
+  margin-bottom: calc(var(--spacing) * 3);
+  border-radius: calc(infinity * 1px);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-salmon);
+  background-color: var(--color-white);
+  padding-inline: calc(var(--spacing) * 5);
+  padding-block: calc(var(--spacing) * 2.5);
+  text-align: center;
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-salmon);
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-salmon);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+  &:focus {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  &:focus {
+    --tw-ring-color: var(--color-dark-salmon);
+  }
+  &:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    border-color: var(--color-light-salmon);
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-gray-900);
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-salmon);
+  }
+  @media (prefers-color-scheme: dark) {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-salmon);
+      }
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    &:focus {
+      --tw-ring-color: var(--color-light-salmon);
+    }
+  }
+}
+.inactive-btn {
+  margin-inline-end: calc(var(--spacing) * 3);
+  margin-bottom: calc(var(--spacing) * 3);
+  border-radius: calc(infinity * 1px);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-white);
+  background-color: var(--color-white);
+  padding-inline: calc(var(--spacing) * 5);
+  padding-block: calc(var(--spacing) * 2.5);
+  text-align: center;
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-900);
+  &:hover {
+    @media (hover: hover) {
+      border-color: var(--color-gray-200);
+    }
+  }
+  &:focus {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  &:focus {
+    --tw-ring-color: var(--color-gray-300);
+  }
+  &:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    border-color: var(--color-gray-900);
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-gray-900);
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-white);
+  }
+  @media (prefers-color-scheme: dark) {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-gray-700);
+      }
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    &:focus {
+      --tw-ring-color: var(--color-gray-800);
+    }
+  }
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-space-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-space-x-reverse: 0;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+    }
+  }
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* Default CSS styling for blog posts written in markdown */
+
+.post-content h1 {
+	display: block;
+	font-size: 2em;
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+.post-content h2 {
+	display: block;
+	font-size: 1.5em;
+	margin-top: 0.83em;
+	margin-bottom: 0.83em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+.post-content h3 {
+	display: block;
+	font-size: 1.17em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+.post-content h4 {
+	display: block;
+	margin-top: 1.33em;
+	margin-bottom: 1.33em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+.post-content h5 {
+	display: block;
+	font-size: 0.83em;
+	margin-top: 1.67em;
+	margin-bottom: 1.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+.post-content h6 {
+	display: block;
+	font-size: 0.67em;
+	margin-top: 2.33em;
+	margin-bottom: 2.33em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+.post-content p {
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+}
+.post-content a {
+	text-decoration: underline;
+	text-decoration-color: var(--color-salmon);
+}
+
+.post-content a:hover,
+.post-content a:active {
+	color: var(--color-gray-500);
+}
+
+.post-content ul {
+	display: block;
+	list-style-type: disc;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 40px;
+}
+
+.post-content ol {
+	display: block;
+	list-style-type: decimal;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 40px;
+}
+
+.post-content figure {
+	display: table;
+	max-height: 90vh;
+	width: 100%;
+	margin: 2em auto;
+}
+
+.post-content figure figcaption {
+	display: table-caption;
+	caption-side: bottom;
+	color: var(--color-gray-500);
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: var(--text-sm);
+	text-align: center;
+}
+
+.post-content picture {
+	display: flex;
+	justify-content: center;
+}
+
+.post-content img {
+	max-height: 87vh;
+	width: auto;
+	max-width: 100%;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+/* img{
+	max-width: 100%;
+  }
+  img[width][height] {
+	height: auto;
+  }
+  img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+  }
+  video,
+  iframe {
+	  width: 100%;
+	  height: auto;
+  }
+  iframe {
+	  aspect-ratio: 16/9;
+  } */
+		</style>
+
+		
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header class="fixed top-0 right-0 left-0 w-screen z-500 backdrop-blur-lg">
+			<!-- nav bar adapted from https://flowbite.com/docs/components/navbar/-->
+			<nav class="sticky text-black dark:text-white border-gray-200">
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<div class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4 md:flex-nowrap md:box-border md:px-[6%]">
+					<button data-collapse-toggle="navbar-hamburger" id="navbar-hamburger-button" type="button" class="flex items-center justify-center p-2 w-10 h-10 text-sm text-black dark:text-white rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden" aria-controls="navbar-hamburger" aria-expanded="false">
+						<span class="sr-only">Open main menu</span>
+						<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+						</svg>
+					</button>
+					<a href="/" class="hidden sm:inline-flex items-center space-x-3 rtl:space-x-reverse">
+						<span class="self-center text-lg md:text-2xl font-semibold whitespace-nowrap hover:text-gray-500">will or won't</span>
+					</a>
+
+					<div class="w-full md:flex md:w-auto hidden" id="navbar-hamburger">
+						<ul class="flex flex-col md:flex-row font-medium mt-4 rounded-lg text-black dark:text-white">
+							<li class="md:inline-block">
+								<a href="/#home" class="block py-2 px-3 mx-1 my-1 md:my-0 rounded-full border border-salmon hover:bg-salmon hover:text-white">home</a>
+							</li>
+							<li class="md:inline-block">
+									<a href="/blog/" class="block py-2 px-3 mx-1 my-1 md:my-0 rounded-full border border-salmon hover:bg-salmon hover:text-white">blog</a>
+							</li>
+							<li class="md:inline-block">
+										<a href="/#about" class="block py-2 px-3 mx-1 my-1 md:my-0 rounded-full border border-salmon hover:bg-salmon hover:text-white">about</a>
+									</li>
+									<li class="md:inline-block">
+										<a href="/#contact" class="block py-2 px-3 mx-1 my-1 md:my-0 rounded-full border border-salmon hover:bg-salmon hover:text-white">contact</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</header>
+
+				<main id="skip" class="min-h-screen">
+					
+
+
+
+
+
+
+<section class="bg-white dark:bg-dark-salmon text-black dark:text-white min-h-screen px-15 md:px-35 lg:px-55 xl:px-75 pt-25 pb-10">
+	<h1 class="text-4xl font-semibold mb-6" id="hiking-the-schwyzer-hoehenweg-sort-of">Hiking the Schwyzer Höhenweg (sort of)</h1>
+	<ul class="inline-flex flex-wrap gap-1 mb-5">
+		<li class="mr-10">
+			<time class="text-lg" datetime="2025-04-23">23 April 2025</time>
+		</li>
+			<li class="inline-flex justify-center justify-items-center">
+				<a href="/tags/outdoors/" class="text-lg capitalize text-center underline decoration-salmon hover:text-gray-500">
+					<em>outdoors</em>
+				</a>
+			</li>
+	</ul>
+
+	<div class="post-content text-base">
+		<heading-anchors>
+			<p>This April, I took an early-season backpacking trip to Schwyz, Switzerland, on the shores of Lake Lucerne. My not-very-thought-out plan (because I planned it all the night before), was to hike the <a href="https://schweizmobil.ch/en/hiking-in-switzerland/route-63">Schwyzer Höhenweg</a>. It seemed like the perfect destination because it summitted three relatively low-elevation peaks in the foothills of the alps which would be snow-free but give great views of the big, snow-capped mountains like the Jungfrau. Not everything went according to plan, however.</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-256.jpeg" alt="Lake Lucerne from Rigi Kaltbad" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Lake Lucerne from Rigi Kaltbad</figcaption></figure>
+<h2 id="day-1-munich-to-rigi">Day 1: Munich to Rigi</h2>
+<p>I made my way to the train station in Munich and hopped on the direct train to Zurich. Because I planned everything last minute, I had not bought any train tickets. I assumed my Deutschland ticket, which provides free travel on all regional trains in Germany, would cover me to the border.</p>
+<p>However, as soon as the train started moving, I realized that it obviously wasn't a regional train because it was going straight to Zurich. I checked ticket prices and they were almost 100€ for the 3-hour journey. I knew I also had to take a few more trains to get to the start of the route in Küssnacht which would also be expensive, so I had the brilliant idea to just buy a Swiss Travel Pass, which cost 300€ but would cover all travel in Switzerland for 3 days.</p>
+<p>Soon after, the attendant came by to check my ticket. I showed her my new, very expensive Swiss Travel Pass, but she just shook her head. &quot;We are not in Switzerland,&quot; she said, &quot;This is Germany. That ticket is not valid here.&quot; In my defense, I was really tired that morning. The attendant luckily didn't make me pay a fine like usual, but she did make me buy the 80€ ticket to the Swiss border right there.</p>
+<p>So within 30 minutes of starting my cheap backpacking trip, I'd already spent more money than I planned for on the whole trip, and it wasn't over yet. An hour and a half later, my phone buzzed with a text from my cellphone provider: &quot;Dear Customer, the monthly maximum amount of EUR 59.50 for data roaming has almost been reached.&quot; I hadn't even been using my phone -- I'd been reading my book, and I thought I was still in Germany, so my phone should not have been using any roaming data. But 30 seconds later, I received another text: &quot;Dear Customer, you have reached the monthly data roaming limit of EUR 59.50 in Andorra, the Isle of Man, and Switzerland. To protect you from further charges, mobile data usage in these countries is blocked for the remainder of the month.&quot; And 5 minutes after that: &quot;Welcome to Switzerland.&quot;</p>
+<p>Somehow my phone had used 1GB of roaming data in 30 seconds before I even reached the Swiss border, which is especially shocking because I only use 2GB of data total per month. I also didn't know that Switzerland wasn't covered by my plan because it isn't in the EU. Just as I realized all this, an announcement came over the loud speakers: &quot;Due to technical difficulties on the track ahead, this train will be stopping at the border. All passengers must disembark and transfer to another train.&quot;</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-256.jpeg" alt="looking up at the Rigi from Küssnacht" width="1024" height="1159" srcset="/blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Looking up at the Rigi from Küssnacht, the first leg of the hike.</figcaption></figure>
+<p>So what should have been a simple, three-hour train journey to Zurich cost me 450€ and didn't even get me into Switzerland. I had to transfer to a slow, regional train to get to Zurich and then took two more trains to get to the start of my route in Küssnacht am Rigi. From there, my destination for the night was the top of the Rigi mountain.</p>
+<p>Side note: if you want a good reason not to learn German, just try to talk to locals about the Rigi mountain. Most locals refer to Rigi as a female with &quot;die Rigi&quot; because she is also known around town as &quot;Queen of the mountains.&quot; However, the town is called Küssnacht am Rigi which implies Rigi is masculine and should be referred to as &quot;der Rigi.&quot; An unfortunate feature of German is that the gender of the noun changes how you talk about it, so it gets very confusing for someone new to the language like me when people don't even agree on the gender of the thing.</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/oHG3y1ew9q-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/oHG3y1ew9q-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/oHG3y1ew9q-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/oHG3y1ew9q-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/oHG3y1ew9q-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/oHG3y1ew9q-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/oHG3y1ew9q-256.jpeg" alt="Zugersee from Rigi" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/oHG3y1ew9q-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/oHG3y1ew9q-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/oHG3y1ew9q-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Looking down on the Zugersee from the summit of the Rigi</figcaption></figure>
+<p>I arrived in Küssnacht later in the afternoon than I was planning, so I decided to take advantage of a cable car to start my hike halfway up the Rigi instead of at the base. Hiking in Europe makes a person much lazier than in America. From there, it was a quick two hours to the summit. I made it up there around 6 p.m., and the light on the surrounding hills and lakes was beautiful.</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/pIhRFlYqwZ-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/pIhRFlYqwZ-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/pIhRFlYqwZ-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/pIhRFlYqwZ-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/pIhRFlYqwZ-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/pIhRFlYqwZ-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/pIhRFlYqwZ-256.jpeg" alt="Rigi summit" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/pIhRFlYqwZ-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/pIhRFlYqwZ-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/pIhRFlYqwZ-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Rigi summit</figcaption></figure>
+<p>I then hiked down 1000ft to the town of Rigi Kaltbad, where I found a hostel for the night. A nice but terrible feature of the Alps is that there are cable cars, trains, and towns on almost every mountain, which means you can summit a peak and have pizza and a beer at the top, but which also makes hiking feel completely pointless, just like the tent I had hauled with me but realized was not allowed on pretty much the whole Schwyzer Höhenweg.</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/4VsoQDM1VV-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/4VsoQDM1VV-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/4VsoQDM1VV-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/4VsoQDM1VV-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/4VsoQDM1VV-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/4VsoQDM1VV-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/4VsoQDM1VV-256.jpeg" alt="Rigi Kaltbad sunset" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/4VsoQDM1VV-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/4VsoQDM1VV-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/4VsoQDM1VV-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Sunset from Rigi Kaltbad</figcaption></figure>
+<p>But the hostel was nice and I caught a great sunset.</p>
+<p>Day 1 Stats:</p>
+<ul>
+<li>Trains: 5</li>
+<li>Cable Cars: 1</li>
+<li>Hiking elevation: +2701 -1333 feet</li>
+<li>Hiking distance: 5 miles</li>
+<li>Money spent: 550€</li>
+</ul>
+<h2 id="day-2-rigi-to-sattel-brunnen">Day 2: Rigi to <s>Sattel</s> Brunnen</h2>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/zr7fH5sv9X-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/zr7fH5sv9X-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/zr7fH5sv9X-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/zr7fH5sv9X-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/zr7fH5sv9X-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/zr7fH5sv9X-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/zr7fH5sv9X-256.jpeg" alt="View of route from Rigi summit" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/zr7fH5sv9X-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/zr7fH5sv9X-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/zr7fH5sv9X-1024.jpeg 1024w" sizes="auto"></picture><figcaption>View of the next section of the route from the Rigi summit. The Gnipen/Wildspitz is the peak on the left, while the peaks in the distance are the Mythik mountains.</figcaption></figure>
+<p>The next day, I woke up early because I had to hike the next mountain on the trail, the Wildspitz, and a big storm was forecasted to roll in around 3 p.m., so I wanted to be off the summit by then. The hostel breakfast didn't start until 8:30, so I unfortunately had to skip it, but the very nice lady who was cooking let me take bread with hummus and tomato, an apple, and some chocolates for the road.</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-256.jpeg" alt="Rigi from Gnipen" width="1024" height="1365" srcset="/blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Looking back at the Rigi from the trail up the Gnipen</figcaption></figure>
+<p>I hiked down 600ft, but then I got worried I would be stuck in the storm on the next peak, so I lazily took the train the rest of the way down the Rigi into the town of Goldau. Then I hiked up the Gnipen, which was the only peak on the trail without any cable cars, so I had to use my legs. It was a beautiful morning and by far the best weather of the trip.</p>
+<p>The Gnipen was the site of a landslide on September 2, 1806, when a huge face of the mountain broke off and decimated the town of Goldau below, burying 457 people. The slidepath is still the most obvious feature on the peak and looks surprisingly fresh because it has never been stable enought to heal.</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-256.jpeg" alt="Paraglider above Schwyz" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-1024.jpeg 1024w" sizes="auto"></picture><figcaption>A paraglider above the Schwyz valley</figcaption></figure>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-256.jpeg" alt="Hiking the Wildspitz" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Hiking up the Wildsptiz</figcaption></figure>
+<p>From there I traversed the ridge to the Wildspitz and then down through farms to the town of Sattel. This was supposed to be my camp spot for the night, but the storm that was forecast started to build over the peak I was planning to hike the next day, the Grosser Mythik. It was supposed to rain in the valley and snow up high all night and throughout the next day, making me question whether I really wanted to try and climb the Grosser Mythik in the rain, after it got snowed on all night. What cemented my decision was seeing that my tent site for the night was on the lawn of somebody's RV, so I pvioted and decided to bus to the nearby town of Brunnen, where I could tent camp on the shores of Lake Lucerne and do a nice lake hike in the rain the next day.</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-256.jpeg" alt="Grosser Mythik in storm" width="1024" height="1103" srcset="/blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-1024.jpeg 1024w" sizes="auto"></picture><figcaption>The Grosser Mythik almost completely hidden by the storm</figcaption></figure>
+<p>I wish I had decided just a little bit earlier, because the storm hit and started dumping rain one minute before I set up my tent, which soaked everything before I could get the rain fly on. I also got very wet and very cold, so I went to take shelter by the desk of the RV camp I was staying at.</p>
+<p>There was a very nice lady at the front desk who took pity on me and made me a drink she said would warm me up, which turned out to be hot water with coffee and a lot of Schnapps. It did warm me up, and I went to bed with a pleasant burn in my stomach.</p>
+<p>Day 2 Stats:</p>
+<ul>
+<li>Trains: 1</li>
+<li>Buses: 2</li>
+<li>Hiking elevation: +4400 -4200 feet</li>
+<li>Hiking distance: 9.4 miles</li>
+<li>Money spent: 10€</li>
+</ul>
+<h2 id="day-3-brunnen-to-brunnen-on-the-weg-der-schweiz">Day 3: Brunnen to Brunnen on the Weg der Schweiz</h2>
+<p>The hike I decided on for the next day was the <a href="https://www.wiegederschweiz.ch/erlebnisse/wege/weg-der-schweiz">Weg der Schweiz</a>, which is a hiking trail created to celebrate the 700th anniversary of the Swiss Confederation in 1991 and circles the southernmost arm of Lake Lucerne. The weather forecast was looking worse and worse, so I decided to do it as a day hike and then go back to Munich the day after. It was about 21 miles long but mostly flat with only 4600 ft of elevation, so it seemed doable.</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/lqK-Q6IYZG-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/lqK-Q6IYZG-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/lqK-Q6IYZG-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/lqK-Q6IYZG-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/lqK-Q6IYZG-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/lqK-Q6IYZG-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/lqK-Q6IYZG-256.jpeg" alt="Rütli hiking" width="1024" height="1365" srcset="/blog/2025-04-23/schwyzer-hoehenweg/lqK-Q6IYZG-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/lqK-Q6IYZG-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/lqK-Q6IYZG-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Nice hiking above Rütli on the Weg der Schweiz</figcaption></figure>
+<p>I woke up and took the first ferry at 8:30 a.m. from Brunnen to Rütli to start the hike. The trail started with a nice forest hike on a dirt path onto a bluff above the lake. This is what I expected the entire hike would be like based on the description on the website that the path &quot;should be an example of careful treatment of nature and remain a modest place of encounter. The mountains, the lake and the magnificent views are its shaping elements to this day.&quot;</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/8BWcl43z18-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/8BWcl43z18-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/8BWcl43z18-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/8BWcl43z18-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/8BWcl43z18-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/8BWcl43z18-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/8BWcl43z18-256.jpeg" alt="Mountains on the Weg der Schweiz" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/8BWcl43z18-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/8BWcl43z18-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/8BWcl43z18-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Beautiful mountains rising above Lake Lucerne</figcaption></figure>
+<p>In reality, the quiet, forested trail was quite fleeting and most of the hike followed a massive highway that also circled the lake. It was obvious they had put a lot of time and money into building the path -- where the highway tunneled through cliff faces, they had also blasted a second tunnel just for pedestrians. I could admire the effort that went into it, and the views of the huge, glacier-carved peaks rising straight out of the lake were incredible, but at the same time it was 20 miles of road-walking mostly next to a loud, large highway, which detracted from the overall experience a lot.</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/zH9pbqp9iD-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/zH9pbqp9iD-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/zH9pbqp9iD-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/zH9pbqp9iD-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/zH9pbqp9iD-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/zH9pbqp9iD-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/zH9pbqp9iD-256.jpeg" alt="Highway on the Weg der Schweiz" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/zH9pbqp9iD-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/zH9pbqp9iD-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/zH9pbqp9iD-1024.jpeg 1024w" sizes="auto"></picture><figcaption>The constant companion on the Weg der Schweiz: the highway</figcaption></figure>
+<p>My legs were pretty tired, but I made it back to Brunnen at 6 p.m. and ate a huge pizza to recover.</p>
+<figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/PWdiwStZdJ-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/PWdiwStZdJ-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/PWdiwStZdJ-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/PWdiwStZdJ-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/PWdiwStZdJ-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/PWdiwStZdJ-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/PWdiwStZdJ-256.jpeg" alt="Sisikon on Lake Lucerne" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/PWdiwStZdJ-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/PWdiwStZdJ-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/PWdiwStZdJ-1024.jpeg 1024w" sizes="auto"></picture><figcaption>The little town of Sisikon on Lake Lucerne</figcaption></figure>
+<p>Day 3 Stats:</p>
+<ul>
+<li>Ferries: 1</li>
+<li>Hiking elevation: +4100 -4100 feet</li>
+<li>Hiking distance: 23 miles</li>
+<li>Money spent: 20€</li>
+</ul>
+<h2 id="day-4-brunnen-to-munich">Day 4: Brunnen to Munich</h2>
+<p>The next day was even more rainy and my legs were tired, so I went back to Munich. The return journey was less expensive but much more time-consuming because it was a Friday and the direct trains from Zurich to Munich were all fully-booked. I couldn't book a seat reservation with the Swiss Travel Pass, so I just got on a train, but there were probably a hundred people standing in the aisles and the entry ways because every single seat was reserved and the train was severely overbooked. With multiple screaming babies, lots of confused tourists yelling to each other across the throngs of people, and plenty of pushing as others tried to make their way to the bathroom or off the train, there was no way I was going to make it standing in the middle of it all for three hours, so I disembarked and spent the day taking lots of small, regional trains to get back to Munich, which was slow but had the benefit of being covered by the Deutschland ticket and not busy.</p>
+<p>Day 4 Stats:</p>
+<ul>
+<li>Trains: 7</li>
+<li>Hiking: 0</li>
+<li>Money spent: 10€</li>
+</ul>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Switzerland is expensive. Next time, I will definitely plan my transportation better to avoid the costly mistakes I made this time. The food is also expensive and bad, so I ended up getting almost all my food from the grocery store, which I think was the move.</p>
+<p>On the other hand, the mountains in Switzerland are absolutely incredible and make everything else worth it. It's hard to imagine anything better than seeing steep, snow-capped peaks rising 9000ft straight up from low valleys and lakes.</p>
+<p>Even though I didn't end up hiking the whole path, I enjoyed the Schwyzer Höhenweg because it was mostly on trails, with good views and some cool summits. But the Weg der Schweiz represented everything wrong with outdoor recreation in the alps. It was a similar level of dissappointment to when I first saw the Eiger and found out that the mythical mountain had a train that tunneled through the face and actually had a stop halfway up with windows carved into the rock. I'll have to do better research in the future to find places with a little less infrastructure to avoid disappointment.</p>
+
+		</heading-anchors>
+	</div>
+
+	<div class="relative border-solid border-2 border-olive bg-gray-100 dark:bg-gray-900 p-0 mb-10 mt-15">
+		<div class="bg-light-salmon dark:bg-salmon z-5 absolute -top-6 left-5 block w-50 text-center p-2 border-solid border-2 border-olive text-xl">
+			<b>Will</b> or <b>Won't</b>?</div>
+		<div class="pt-9 pb-5 px-6">
+			<div>
+				<span class="text-lg font-medium">
+					Verdict:</span> I <b>won&#39;t</b>
+				hike the Weg der Schweiz again. I might consider returning to the Schwyzer Höhenweg for another spring or fall trip.</div>
+			<div>
+				<span class="text-lg font-medium">Why:</span>
+				Too much road walking, not enough mountains.</div>
+		</div>
+	</div>
+			<ul class="links-nextprev flex justify-between gap-y-0.5 gap-x-1 pb-1 pt-5" style="border-top: 1px dashed var(--color-gray-500);">
+					<li class="links-nextprev-next grow text-right">Next →<br>
+						<a class="text-right underline decoration-salmon" href="/blog/thiswebsite/how-i-built-this/">How I Built This Website</a>
+					</li>
+				
+			</ul>
+
+</section>
+
+<hr class="text-gray-100 dark:text-white">
+				</main>
+
+				<footer class="box-border bg-light-olive dark:bg-dark-olive min-w-screen mt-auto text-black dark:text-white flex content-center justify-center">
+					<div class="box-border bg-light-olive dark:bg-dark-olive w-4/5 flex flex-row justify-between py-[1%] px-0">
+						<p>Copyright &copy; William Bennatt 2025</p>
+						<div class="justify-between hidden md:block">
+							<ul class="list-none">
+								<li class="inline-block pr-10">
+									<a href="#home" class="hover:text-gray-500">will or won't</a>
+								</li>
+								<li class="inline-block pr-10">
+									<a href="#blog" class="hover:text-gray-500">blog</a>
+								</li>
+								<li class="inline-block pr-10">
+									<a href="#about" class="hover:text-gray-500">about</a>
+								</li>
+								<li class="inline-block pr-10">
+									<a href="#contact" class="hover:text-gray-500">contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</footer>
+
+				<!-- This page `/blog/2025-04-23/schwyzer-hoehenweg/` was built on 2025-05-18T16:19:38.049Z -->
+				<script type="module" src="/dist/Wxzq_87y0h.js"></script>
+			</body>
+		</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	
+	<url>
+		<loc>https://example.com/blog/2025-04-23/schwyzer-hoehenweg/</loc>
+		<lastmod>2025-04-23</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/</loc>
+		<lastmod>2025-05-05</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/</loc>
+		<lastmod>2025-05-06</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/blog/</loc>
+		<lastmod>2025-05-07</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/blog/thiswebsite/how-i-built-this/</loc>
+		<lastmod>2025-05-09</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/blog/threenorthridges/cascades-three-great-north-ridges/</loc>
+		<lastmod>2025-05-12</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/blog/topanimals/top-10-animals/</loc>
+		<lastmod>2025-05-16</lastmod>
+	</url>
+</urlset>
