@@ -24,7 +24,7 @@ These are my favorite animals ranked by their speed, stamina, and strength.
 - Stamina: 9
 - Strength: 9
 
-The tiger is the animal I would be most terrified to run into in the wild, which gives it the number one spot in the rankings. Tigers have been seen taking down elephants on their own. And when they see humans as prey, they can be profilic killers, like the [Champawat Tiger](https://en.wikipedia.org/wiki/Tiger_attack) which killed 436 people in Nepal and India.
+The tiger is the animal I would be most terrified to run into in the wild, which gives it the number one spot in the rankings. Tigers have been seen taking down elephants on their own. And when they see humans as prey, they can be prolific killers, like the [Champawat Tiger](https://en.wikipedia.org/wiki/Tiger_attack) which killed 436 people in Nepal and India.
 
 ## 2. [Leopard](https://en.wikipedia.org/wiki/Leopard)
 
@@ -34,7 +34,7 @@ The tiger is the animal I would be most terrified to run into in the wild, which
 - Stamina: 9
 - Strength: 8
 
-The leopard is similar to the tiger for me in that if there was one hunting people, I wouldn't want to be within 200 miles of it. Sneaky and strong, one has even been spotted killing a young giraffe and hauling its carcass up a tree to cache it.
+The leopard is similar to the tiger for me; if there was one hunting people, I wouldn't want to be within 200 miles of it. Sneaky and strong, one has even been spotted killing a young giraffe and hauling its carcass up a tree to cache it.
 
 ## 3. [Hippo](https://en.wikipedia.org/wiki/Hippopotamus)
 
@@ -54,7 +54,7 @@ When I first saw a hippo at the Woodland Park Zoo in Seattle, I thought they loo
 - Stamina: 10
 - Strength: 9
 
-The Polar Bear may be ranked number 4, but it is the number 1 animal that I would like to see in the wild. Everything new I learn completely changes my picture of them. They spend enough time in the water to be considered a marine mammal, and swim for an average of 3.5 days at a time. They hunt blubber-rich prey like seals, walruses, and even beluga whales and narwhals. They are also pretty scary.
+The Polar Bear may be ranked number 4, but it is the number 1 animal that I would like to see in the wild. Everything new I learn completely changes my picture of them. They spend enough time in the water to be considered marine mammals and swim for an average of 3.5 days at a time. They hunt blubber-rich prey like seals, walruses, and even beluga whales and narwhals. They are also pretty scary.
 
 ## 5. [Hedgehog](https://en.wikipedia.org/wiki/Hedgehog)
 
@@ -74,7 +74,7 @@ It may not be the strongest, but it is really cute. I like seeing hedgehogs. I a
 - Stamina: 6
 - Strength: 10
 
-The largest living land animals, elephants have always captured my fascination and respect. They are very smart, have complex social structures, and practice rituals for their dead. They are the original gentle giants - they just want to live their lives, but if someone messes with them, they will aggressively defend themselves.
+The largest living land animals, elephants have always captured my fascination and respect. They are very smart, have complex social structures, and practice rituals for their dead. They are the original gentle giants –– they just want to live their lives, but if someone messes with them, they will aggressively defend themselves.
 
 ## 7. [Dire Wolf](https://en.wikipedia.org/wiki/Dire_wolf)
 

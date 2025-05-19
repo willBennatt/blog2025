@@ -4,13 +4,15 @@ This is my new blog built with the static-site generator Eleventy. I started fro
 
 ## Adding new posts
 
-Just create a new markdown or html file in the content/blog/ directory, supply the necessary frontmatter that helps format each post nicely, and you're done.
+Just create a new markdown or html file in the content/blog/ directory, supply the necessary front-matter that helps format each post nicely, and you're done.
 
 I like to put each post in its own directory with the images used in them. The images get automatically transformed during the build to a range of sizes and formats using the [eleventy-img plugin](https://www.npmjs.com/package/@11ty/eleventy-img).
 
 ## Deploying
 
-TBD.
+This is currently hosted on CloudFlare Pages, which automatically reads from the git repository to build and deploy any changes on each commit.
+
+[willorwont.com](https://willorwont.com/)
 
 #### Content Security Policy
 

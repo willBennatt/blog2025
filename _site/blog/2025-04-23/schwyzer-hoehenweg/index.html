@@ -317,6 +317,9 @@
   .inline-flex {
     display: inline-flex;
   }
+  .table {
+    display: table;
+  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -334,6 +337,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
   }
   .w-4\/5 {
     width: calc(4/5 * 100%);
@@ -368,11 +374,20 @@
   .min-w-screen {
     min-width: 100vw;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .grow {
     flex-grow: 1;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .list-decimal {
     list-style-type: decimal;
@@ -434,6 +449,9 @@
       margin-inline-start: calc(calc(var(--spacing) * 3) * var(--tw-space-x-reverse));
       margin-inline-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-x-reverse)));
     }
+  }
+  .gap-y-0 {
+    row-gap: calc(var(--spacing) * 0);
   }
   .gap-y-0\.5 {
     row-gap: calc(var(--spacing) * 0.5);
@@ -621,17 +639,28 @@
   .capitalize {
     text-transform: capitalize;
   }
+  .italic {
+    font-style: italic;
+  }
   .underline {
     text-decoration-line: underline;
   }
   .decoration-salmon {
     text-decoration-color: var(--color-salmon);
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .backdrop-blur-lg {
     --tw-backdrop-blur: blur(var(--blur-lg));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
@@ -1101,6 +1130,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -1285,6 +1319,7 @@
       --tw-space-x-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
@@ -1701,13 +1736,13 @@ pre[class*="language-diff-"] {
 
 	<div class="post-content text-base">
 		<heading-anchors>
-			<p>This April, I took an early-season backpacking trip to Schwyz, Switzerland, on the shores of Lake Lucerne. My not-very-thought-out plan (because I planned it all the night before), was to hike the <a href="https://schweizmobil.ch/en/hiking-in-switzerland/route-63">Schwyzer Höhenweg</a>. It seemed like the perfect destination because it summitted three relatively low-elevation peaks in the foothills of the alps which would be snow-free but give great views of the big, snow-capped mountains like the Jungfrau. Not everything went according to plan, however.</p>
+			<p>This April, I took an early-season backpacking trip to Schwyz, Switzerland, on the shores of Lake Lucerne. My not-very-thought-out plan (because I planned it all the night before), was to hike the <a href="https://schweizmobil.ch/en/hiking-in-switzerland/route-63">Schwyzer Höhenweg</a>. It seemed like the perfect destination because it summited three relatively low-elevation peaks in the foothills of the alps which would be snow-free but give great views of the big, snow-capped mountains like the Jungfrau. Not everything went according to plan, however.</p>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-256.jpeg" alt="Lake Lucerne from Rigi Kaltbad" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/nKJ3b_1caF-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Lake Lucerne from Rigi Kaltbad</figcaption></figure>
 <h2 id="day-1-munich-to-rigi">Day 1: Munich to Rigi</h2>
 <p>I made my way to the train station in Munich and hopped on the direct train to Zurich. Because I planned everything last minute, I had not bought any train tickets. I assumed my Deutschland ticket, which provides free travel on all regional trains in Germany, would cover me to the border.</p>
-<p>However, as soon as the train started moving, I realized that it obviously wasn't a regional train because it was going straight to Zurich. I checked ticket prices and they were almost 100€ for the 3-hour journey. I knew I also had to take a few more trains to get to the start of the route in Küssnacht which would also be expensive, so I had the brilliant idea to just buy a Swiss Travel Pass, which cost 300€ but would cover all travel in Switzerland for 3 days.</p>
+<p>However, as soon as the train started moving, I realized that it obviously wasn't a regional train because it was going to a different country. I checked ticket prices and they were almost 100€ for the 3-hour journey. I knew I also had to take a few more trains to get to the start of the route in Küssnacht which would also be expensive, so I had the brilliant idea to just buy a Swiss Travel Pass, which cost 300€ but would cover all travel in Switzerland for 3 days.</p>
 <p>Soon after, the attendant came by to check my ticket. I showed her my new, very expensive Swiss Travel Pass, but she just shook her head. &quot;We are not in Switzerland,&quot; she said, &quot;This is Germany. That ticket is not valid here.&quot; In my defense, I was really tired that morning. The attendant luckily didn't make me pay a fine like usual, but she did make me buy the 80€ ticket to the Swiss border right there.</p>
-<p>So within 30 minutes of starting my cheap backpacking trip, I'd already spent more money than I planned for on the whole trip, and it wasn't over yet. An hour and a half later, my phone buzzed with a text from my cellphone provider: &quot;Dear Customer, the monthly maximum amount of EUR 59.50 for data roaming has almost been reached.&quot; I hadn't even been using my phone -- I'd been reading my book, and I thought I was still in Germany, so my phone should not have been using any roaming data. But 30 seconds later, I received another text: &quot;Dear Customer, you have reached the monthly data roaming limit of EUR 59.50 in Andorra, the Isle of Man, and Switzerland. To protect you from further charges, mobile data usage in these countries is blocked for the remainder of the month.&quot; And 5 minutes after that: &quot;Welcome to Switzerland.&quot;</p>
+<p>So within 30 minutes of starting my cheap backpacking trip, I'd already spent more money than I planned for on the whole trip, and it wasn't over yet. An hour and a half later, my phone buzzed with a text from my cellphone provider: &quot;Dear Customer, the monthly maximum amount of EUR 59.50 for data roaming has almost been reached.&quot; I hadn't even been using my phone –– I'd been reading my book, and I thought I was still in Germany, so my phone should not have been using any roaming data. But 30 seconds later, I received another text: &quot;Dear Customer, you have reached the monthly data roaming limit of EUR 59.50 in Andorra, the Isle of Man, and Switzerland. To protect you from further charges, mobile data usage in these countries is blocked for the remainder of the month.&quot; And 5 minutes after that: &quot;Welcome to Switzerland.&quot;</p>
 <p>Somehow my phone had used 1GB of roaming data in 30 seconds before I even reached the Swiss border, which is especially shocking because I only use 2GB of data total per month. I also didn't know that Switzerland wasn't covered by my plan because it isn't in the EU. Just as I realized all this, an announcement came over the loud speakers: &quot;Due to technical difficulties on the track ahead, this train will be stopping at the border. All passengers must disembark and transfer to another train.&quot;</p>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-256.jpeg" alt="looking up at the Rigi from Küssnacht" width="1024" height="1159" srcset="/blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/EvTxhWFRx1-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Looking up at the Rigi from Küssnacht, the first leg of the hike.</figcaption></figure>
 <p>So what should have been a simple, three-hour train journey to Zurich cost me 450€ and didn't even get me into Switzerland. I had to transfer to a slow, regional train to get to Zurich and then took two more trains to get to the start of my route in Küssnacht am Rigi. From there, my destination for the night was the top of the Rigi mountain.</p>
@@ -1731,10 +1766,10 @@ pre[class*="language-diff-"] {
 <p>The next day, I woke up early because I had to hike the next mountain on the trail, the Wildspitz, and a big storm was forecasted to roll in around 3 p.m., so I wanted to be off the summit by then. The hostel breakfast didn't start until 8:30, so I unfortunately had to skip it, but the very nice lady who was cooking let me take bread with hummus and tomato, an apple, and some chocolates for the road.</p>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-256.jpeg" alt="Rigi from Gnipen" width="1024" height="1365" srcset="/blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/OURQSRiP5S-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Looking back at the Rigi from the trail up the Gnipen</figcaption></figure>
 <p>I hiked down 600ft, but then I got worried I would be stuck in the storm on the next peak, so I lazily took the train the rest of the way down the Rigi into the town of Goldau. Then I hiked up the Gnipen, which was the only peak on the trail without any cable cars, so I had to use my legs. It was a beautiful morning and by far the best weather of the trip.</p>
-<p>The Gnipen was the site of a landslide on September 2, 1806, when a huge face of the mountain broke off and decimated the town of Goldau below, burying 457 people. The slidepath is still the most obvious feature on the peak and looks surprisingly fresh because it has never been stable enought to heal.</p>
+<p>The Gnipen was the site of a landslide on September 2, 1806, when a huge face of the mountain broke off and decimated the town of Goldau below, burying 457 people. The slide path is still the most obvious feature on the peak and looks surprisingly fresh because it has never been stable enough to heal.</p>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-256.jpeg" alt="Paraglider above Schwyz" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/bP0S3OCwVo-1024.jpeg 1024w" sizes="auto"></picture><figcaption>A paraglider above the Schwyz valley</figcaption></figure>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-256.jpeg" alt="Hiking the Wildspitz" width="1024" height="768" srcset="/blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/60iC571o7Y-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Hiking up the Wildsptiz</figcaption></figure>
-<p>From there I traversed the ridge to the Wildspitz and then down through farms to the town of Sattel. This was supposed to be my camp spot for the night, but the storm that was forecast started to build over the peak I was planning to hike the next day, the Grosser Mythik. It was supposed to rain in the valley and snow up high all night and throughout the next day, making me question whether I really wanted to try and climb the Grosser Mythik in the rain, after it got snowed on all night. What cemented my decision was seeing that my tent site for the night was on the lawn of somebody's RV, so I pvioted and decided to bus to the nearby town of Brunnen, where I could tent camp on the shores of Lake Lucerne and do a nice lake hike in the rain the next day.</p>
+<p>From there I traversed the ridge to the Wildspitz and then down through farms to the town of Sattel. This was supposed to be my camp spot for the night, but the storm that was forecast started to build over the peak I was planning to hike the next day, the Grosser Mythik. It was supposed to rain in the valley and snow up high all night and throughout the next day, making me question whether I really wanted to try and climb the Grosser Mythik in the rain, after it got snowed on all night. What cemented my decision was seeing that my tent site for the night was on the lawn of somebody's RV, so I pivoted and decided to bus to the nearby town of Brunnen, where I could tent camp on the shores of Lake Lucerne and do a nice lake hike in the rain the next day.</p>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-256.avif 256w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-512.avif 512w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-256.webp 256w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-512.webp 512w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-256.jpeg" alt="Grosser Mythik in storm" width="1024" height="1103" srcset="/blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-256.jpeg 256w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-512.jpeg 512w, /blog/2025-04-23/schwyzer-hoehenweg/8OUvSCZyHN-1024.jpeg 1024w" sizes="auto"></picture><figcaption>The Grosser Mythik almost completely hidden by the storm</figcaption></figure>
 <p>I wish I had decided just a little bit earlier, because the storm hit and started dumping rain one minute before I set up my tent, which soaked everything before I could get the rain fly on. I also got very wet and very cold, so I went to take shelter by the desk of the RV camp I was staying at.</p>
 <p>There was a very nice lady at the front desk who took pity on me and made me a drink she said would warm me up, which turned out to be hot water with coffee and a lot of Schnapps. It did warm me up, and I went to bed with a pleasant burn in my stomach.</p>
@@ -1773,7 +1808,7 @@ pre[class*="language-diff-"] {
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>Switzerland is expensive. Next time, I will definitely plan my transportation better to avoid the costly mistakes I made this time. The food is also expensive and bad, so I ended up getting almost all my food from the grocery store, which I think was the move.</p>
 <p>On the other hand, the mountains in Switzerland are absolutely incredible and make everything else worth it. It's hard to imagine anything better than seeing steep, snow-capped peaks rising 9000ft straight up from low valleys and lakes.</p>
-<p>Even though I didn't end up hiking the whole path, I enjoyed the Schwyzer Höhenweg because it was mostly on trails, with good views and some cool summits. But the Weg der Schweiz represented everything wrong with outdoor recreation in the alps. It was a similar level of dissappointment to when I first saw the Eiger and found out that the mythical mountain had a train that tunneled through the face and actually had a stop halfway up with windows carved into the rock. I'll have to do better research in the future to find places with a little less infrastructure to avoid disappointment.</p>
+<p>Even though I didn't end up hiking the whole path, I enjoyed the Schwyzer Höhenweg because it was mostly on trails, with good views and some cool summits. But the Weg der Schweiz represented everything wrong with outdoor recreation in the alps. It was a similar level of disappointment to when I first saw the Eiger and found out that the mythical mountain had a train that tunneled through the face and actually had a stop halfway up with windows carved into the rock. I'll have to do better research in the future to find places with a little less infrastructure to avoid disappointment.</p>
 
 		</heading-anchors>
 	</div>
@@ -1825,7 +1860,7 @@ pre[class*="language-diff-"] {
 					</div>
 				</footer>
 
-				<!-- This page `/blog/2025-04-23/schwyzer-hoehenweg/` was built on 2025-05-18T16:19:38.049Z -->
+				<!-- This page `/blog/2025-04-23/schwyzer-hoehenweg/` was built on 2025-05-19T11:58:54.181Z -->
 				<script type="module" src="/dist/Wxzq_87y0h.js"></script>
 			</body>
 		</html>

@@ -317,6 +317,9 @@
   .inline-flex {
     display: inline-flex;
   }
+  .table {
+    display: table;
+  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -334,6 +337,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
   }
   .w-4\/5 {
     width: calc(4/5 * 100%);
@@ -368,11 +374,20 @@
   .min-w-screen {
     min-width: 100vw;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .grow {
     flex-grow: 1;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .list-decimal {
     list-style-type: decimal;
@@ -434,6 +449,9 @@
       margin-inline-start: calc(calc(var(--spacing) * 3) * var(--tw-space-x-reverse));
       margin-inline-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-x-reverse)));
     }
+  }
+  .gap-y-0 {
+    row-gap: calc(var(--spacing) * 0);
   }
   .gap-y-0\.5 {
     row-gap: calc(var(--spacing) * 0.5);
@@ -621,17 +639,28 @@
   .capitalize {
     text-transform: capitalize;
   }
+  .italic {
+    font-style: italic;
+  }
   .underline {
     text-decoration-line: underline;
   }
   .decoration-salmon {
     text-decoration-color: var(--color-salmon);
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .backdrop-blur-lg {
     --tw-backdrop-blur: blur(var(--blur-lg));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
@@ -1101,6 +1130,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -1285,6 +1319,7 @@
       --tw-space-x-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
@@ -1710,7 +1745,7 @@ pre[class*="language-diff-"] {
 <li>Stamina: 9</li>
 <li>Strength: 9</li>
 </ul>
-<p>The tiger is the animal I would be most terrified to run into in the wild, which gives it the number one spot in the rankings. Tigers have been seen taking down elephants on their own. And when they see humans as prey, they can be profilic killers, like the <a href="https://en.wikipedia.org/wiki/Tiger_attack">Champawat Tiger</a> which killed 436 people in Nepal and India.</p>
+<p>The tiger is the animal I would be most terrified to run into in the wild, which gives it the number one spot in the rankings. Tigers have been seen taking down elephants on their own. And when they see humans as prey, they can be prolific killers, like the <a href="https://en.wikipedia.org/wiki/Tiger_attack">Champawat Tiger</a> which killed 436 people in Nepal and India.</p>
 <h2 id="2-leopard">2. <a href="https://en.wikipedia.org/wiki/Leopard">Leopard</a></h2>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/topanimals/top-10-animals/i7Skyahkh3-256.avif 256w, /blog/topanimals/top-10-animals/i7Skyahkh3-512.avif 512w, /blog/topanimals/top-10-animals/i7Skyahkh3-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/topanimals/top-10-animals/i7Skyahkh3-256.webp 256w, /blog/topanimals/top-10-animals/i7Skyahkh3-512.webp 512w, /blog/topanimals/top-10-animals/i7Skyahkh3-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/topanimals/top-10-animals/i7Skyahkh3-256.jpeg" alt="leopard" width="1024" height="1321" srcset="/blog/topanimals/top-10-animals/i7Skyahkh3-256.jpeg 256w, /blog/topanimals/top-10-animals/i7Skyahkh3-512.jpeg 512w, /blog/topanimals/top-10-animals/i7Skyahkh3-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Photo by Geranimo on Unsplash</figcaption></figure>
 <ul>
@@ -1718,7 +1753,7 @@ pre[class*="language-diff-"] {
 <li>Stamina: 9</li>
 <li>Strength: 8</li>
 </ul>
-<p>The leopard is similar to the tiger for me in that if there was one hunting people, I wouldn't want to be within 200 miles of it. Sneaky and strong, one has even been spotted killing a young giraffe and hauling its carcass up a tree to cache it.</p>
+<p>The leopard is similar to the tiger for me; if there was one hunting people, I wouldn't want to be within 200 miles of it. Sneaky and strong, one has even been spotted killing a young giraffe and hauling its carcass up a tree to cache it.</p>
 <h2 id="3-hippo">3. <a href="https://en.wikipedia.org/wiki/Hippopotamus">Hippo</a></h2>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/topanimals/top-10-animals/8lTmfuFkyW-256.avif 256w, /blog/topanimals/top-10-animals/8lTmfuFkyW-512.avif 512w, /blog/topanimals/top-10-animals/8lTmfuFkyW-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/topanimals/top-10-animals/8lTmfuFkyW-256.webp 256w, /blog/topanimals/top-10-animals/8lTmfuFkyW-512.webp 512w, /blog/topanimals/top-10-animals/8lTmfuFkyW-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/topanimals/top-10-animals/8lTmfuFkyW-256.jpeg" alt="hippo" width="1024" height="576" srcset="/blog/topanimals/top-10-animals/8lTmfuFkyW-256.jpeg 256w, /blog/topanimals/top-10-animals/8lTmfuFkyW-512.jpeg 512w, /blog/topanimals/top-10-animals/8lTmfuFkyW-1024.jpeg 1024w" sizes="auto"></picture><figcaption>By Diego Delso, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=74486420</figcaption></figure>
 <ul>
@@ -1734,7 +1769,7 @@ pre[class*="language-diff-"] {
 <li>Stamina: 10</li>
 <li>Strength: 9</li>
 </ul>
-<p>The Polar Bear may be ranked number 4, but it is the number 1 animal that I would like to see in the wild. Everything new I learn completely changes my picture of them. They spend enough time in the water to be considered a marine mammal, and swim for an average of 3.5 days at a time. They hunt blubber-rich prey like seals, walruses, and even beluga whales and narwhals. They are also pretty scary.</p>
+<p>The Polar Bear may be ranked number 4, but it is the number 1 animal that I would like to see in the wild. Everything new I learn completely changes my picture of them. They spend enough time in the water to be considered marine mammals and swim for an average of 3.5 days at a time. They hunt blubber-rich prey like seals, walruses, and even beluga whales and narwhals. They are also pretty scary.</p>
 <h2 id="5-hedgehog">5. <a href="https://en.wikipedia.org/wiki/Hedgehog">Hedgehog</a></h2>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/topanimals/top-10-animals/l2PHSDkf0I-256.avif 256w, /blog/topanimals/top-10-animals/l2PHSDkf0I-512.avif 512w, /blog/topanimals/top-10-animals/l2PHSDkf0I-1024.avif 1024w" sizes="auto"><source type="image/webp" srcset="/blog/topanimals/top-10-animals/l2PHSDkf0I-256.webp 256w, /blog/topanimals/top-10-animals/l2PHSDkf0I-512.webp 512w, /blog/topanimals/top-10-animals/l2PHSDkf0I-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/topanimals/top-10-animals/l2PHSDkf0I-256.jpeg" alt="hedgehog" width="1024" height="680" srcset="/blog/topanimals/top-10-animals/l2PHSDkf0I-256.jpeg 256w, /blog/topanimals/top-10-animals/l2PHSDkf0I-512.jpeg 512w, /blog/topanimals/top-10-animals/l2PHSDkf0I-1024.jpeg 1024w" sizes="auto"></picture><figcaption>Hedgehog with balloon syndrome. Photo from Scottish SPCA</figcaption></figure>
 <ul>
@@ -1750,7 +1785,7 @@ pre[class*="language-diff-"] {
 <li>Stamina: 6</li>
 <li>Strength: 10</li>
 </ul>
-<p>The largest living land animals, elephants have always captured my fascination and respect. They are very smart, have complex social structures, and practice rituals for their dead. They are the original gentle giants - they just want to live their lives, but if someone messes with them, they will aggressively defend themselves.</p>
+<p>The largest living land animals, elephants have always captured my fascination and respect. They are very smart, have complex social structures, and practice rituals for their dead. They are the original gentle giants –– they just want to live their lives, but if someone messes with them, they will aggressively defend themselves.</p>
 <h2 id="7-dire-wolf">7. <a href="https://en.wikipedia.org/wiki/Dire_wolf">Dire Wolf</a></h2>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/topanimals/top-10-animals/jVw8FAb8Bm-256.avif 256w, /blog/topanimals/top-10-animals/jVw8FAb8Bm-512.avif 512w" sizes="auto"><source type="image/webp" srcset="/blog/topanimals/top-10-animals/jVw8FAb8Bm-256.webp 256w, /blog/topanimals/top-10-animals/jVw8FAb8Bm-512.webp 512w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/topanimals/top-10-animals/jVw8FAb8Bm-256.jpeg" alt="dire wolf pup" width="512" height="488" srcset="/blog/topanimals/top-10-animals/jVw8FAb8Bm-256.jpeg 256w, /blog/topanimals/top-10-animals/jVw8FAb8Bm-512.jpeg 512w" sizes="auto"></picture><figcaption>Dire Wolf pups. From Colossal Biosciences</figcaption></figure>
 <ul>
@@ -1836,7 +1871,7 @@ pre[class*="language-diff-"] {
 					</div>
 				</footer>
 
-				<!-- This page `/blog/topanimals/top-10-animals/` was built on 2025-05-18T16:19:38.049Z -->
+				<!-- This page `/blog/topanimals/top-10-animals/` was built on 2025-05-19T11:58:54.181Z -->
 				<script type="module" src="/dist/Wxzq_87y0h.js"></script>
 			</body>
 		</html>

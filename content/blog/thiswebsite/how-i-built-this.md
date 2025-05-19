@@ -28,15 +28,17 @@ I never had a vendetta against PHP, but I have always used my website more as a 
 
 ## Other Iterations
 
-I did a lot of local re-building and tearing down before I got to this latest version of my site. In 2021, I re-made my old site using a MEAN stack, which stands for **M**ongoDB, **E**xpress, **A**ngular, and **N**ode. Learning these new tools was great, because I'd heard people talk about MongoDB and Node a lot but had never used it at that point, and using Node with Express was a very different experience than PHP. Working at a big company like Amazon did give me a hatred for dynamically typed languages when they are used for large projects because it quickly becomes very difficult to figure out what type of data any function is dealing with, but I love them for small, personal projects like this. So at work I prefer Typescript, but at home I go for Javascript.
+I did a lot of local re-building and tearing down before I got to this latest version of my site. In 2021, I re-made my old site using a MEAN stack, which stands for **M**ongoDB, **E**xpress, **A**ngular, and **N**ode. Learning these new tools was great, because I'd heard people talk about MongoDB and Node a lot but had never used it at that point, and using Node with Express was a very different experience than PHP.
+
+Working at a big company like Amazon did give me a hatred for dynamically typed languages when they are used for large projects because it quickly becomes very difficult to figure out what type of data any function is dealing with, but I love them for small, personal projects like this. So at work I prefer Typescript, but at home I go for Javascript.
 
 ![mullet meme](./mullet.png)
 
 However, around 2022 everyone started talking about this new language called Rust. Apparently, it was fast and safe because it used an ownership memory model to achieve compile-time verification of memory and concurrency safety. At AWS, several big components were being [rewritten](https://aws.amazon.com/blogs/opensource/why-aws-loves-rust-and-how-wed-like-to-help/) in Rust.
 
-Eventually, I decided I needed to try it for myself, so I worked through the [Learn Rust](https://doc.rust-lang.org/book/) book and started re-building my website backend with it. The ownership model in Rust makes it unlike any other language I've used, and I still find it very un-intuitive to write code in, but it was very satisfying getting it to work.
+I decided I needed to try it for myself, so I worked through the [Learn Rust](https://doc.rust-lang.org/book/) book and started re-building my website backend with it. The ownership model in Rust makes it unlike any other language I've used, and I still find it un-intuitive to write code in, but it was very satisfying getting it to work.
 
-Because I was new to the language and found it difficult to write in, I wanted my website to be very simple. I would write my blog posts in Markdown, and then a very simple backend component would translate the Markdown to HTML, and then the server would serve the plain HTML pages.
+Because I was new to the language and found it difficult to write in, I wanted my website to be very simple. I would write my blog posts in Markdown, and then a backend component would translate the Markdown to HTML, and then the server would serve the plain HTML pages.
 
 This was fun to build and I learned a lot about Rust from it, but it also didn't really make sense running all of that just to serve a static site.
 

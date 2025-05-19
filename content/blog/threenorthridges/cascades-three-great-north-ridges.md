@@ -34,7 +34,7 @@ The plants closed in and it became difficult for us to spot each other through t
 
 ![Approaching Goode](./goode/goode-approach-2.jpg "Looking up at Mt. Goode on the approach")
 
-The fun wasn't over yet though. We had to tunnel though thick alder slides to bypass waterfall-covered cliffs before we arrived at our camp below the Goode Glacier.
+The fun wasn't over yet though. We had to tunnel through thick alder slides to bypass waterfall-covered cliffs before we arrived at our camp below the Goode Glacier.
 
 ![Camping below Goode](./goode/goode-camp-1.jpg "Camping below the North Ridge of Goode")
 
@@ -50,7 +50,7 @@ Once on the rock, we simulclimbed to the summit in 4 or 5 hours.
 
 ![Resting on the climb](./goode/goode-climb-rest.jpg "Joe resting on the way up")
 
-![On the upper buttress](./goode/goode-climb-2.jpg "Me on the uppper section, nearing the summit")
+![On the upper buttress](./goode/goode-climb-2.jpg "Me on the upper section, nearing the summit")
 
 The Goode summit is a small but flat circle that makes for a perfect bivy, but we arrived on top around 2 p.m., and with no shelter from the hot sun up there and a long hike out the next day, we decided to start our descent.
 
@@ -66,17 +66,17 @@ We made camp on some beautiful heather benches below the summit.
 
 ![Sleeping on a nice rock](./goode/goode-camp-3.jpg "Sleeping on a nice rock with an even better view")
 
-The next day we descended the mountain and then had a long, hot walk back to the parking area. All told, I think getting from the summit back to the trailhead was about 24 miles plus a lot of elevation drop.
+The next day we descended the mountain and then had a long, hot walk back to the parking area. All told, I think getting from the summit back to the trailhead was about 24 miles and an elevation loss of 7000 feet.
 
 ![Looking back at Goode](./goode/goode-descent-1.jpg "Looking back up at Goode from Park Creek")
 
 ## The North Ridge of Stuart
 
-One week later, Joe and I went back out and climbed the North Ridge of Stuart. This is the most-classic alpine rock route in Washington and my favorite. Steep climbing on a beautiful, clean, granite ridge the cuts through two hanging glaciers makes this a must-do route.
+One week later, Joe and I went back out and climbed the North Ridge of Stuart. This is the most-classic alpine rock route in Washington and my favorite. Steep climbing on a beautiful, clean granite ridge the cuts through two hanging glaciers makes this a must-do route.
 
 ### Approach
 
-We approached from Ingalls Lake. It was kind of a cold, gray day.
+We approached from Ingalls Lake. It was a cold, gray day.
 
 ![Mt. Stuart from Ingalls Lake](./stuart/stuart-view-1.jpg "Looking at Stuart from Ingalls Lake. The north ridge is on the opposite side of the mountain.")
 
@@ -104,7 +104,7 @@ There is a large ledge at the halfway mark. After that, the really cool climbing
 
 ### Descent
 
-The descent is a long, hot, and dusty trek down the Cascadian Couloir, although we were very motivated to get to Ingalls Creek with cold water at the bottom.
+The descent is a long, hot, and dusty trek down the Cascadian Couloir. We were very motivated to get to the cold water of Ingalls Creek at the bottom.
 
 ![Mt. Stuart from Long's Pass](./stuart/stuart-view-2.jpg "Looking back at Mt. Stuart from Long's Pass")
 
@@ -136,21 +136,21 @@ After that, we climbed for about 7 hours straight to make it to the halfway ledg
 
 ![climbing though the overhang](./slesse/slesse-climb-1.jpg "Manny climbing through the overhang")
 
-![looking down on slesse](./slesse/slesse-looking-down.jpg "Looking down from one of the money pitches on the upper ridge")
+![looking down on Slesse](./slesse/slesse-looking-down.jpg "Looking down from one of the money pitches on the upper ridge")
 
-We arrived on the halfway ledge around 3 p.m. and decided there was more than enough daylight to keep climbing. However, we hadn't done as much research as we probably should have, and thought there would be some more good ledges to sleep on higher up the route. So we just kept climbing, waiting for a good ledge to appear, but none did, and eventually it started getting dark. But we just put on headlamps and kept climbing, holding out for the right ledge. We finally made it to a good one around 9:30 p.m. The light was gone and we had no idea where we were on the route at that point, but I thought we were maybe three-quarters of the way up the ridge and would have quite a bit more climbing to do in the morning, so you can imagine my surprise when we woke up basically on the summit.
+We arrived on the halfway ledge around 3 p.m. and decided there was more than enough daylight to keep climbing. However, we hadn't done as much research as we probably should have and thought there would be some more good ledges to sleep on higher up the route. So we just kept climbing, waiting for a good ledge to appear, but none did, and eventually it started getting dark. But we just put on headlamps and kept climbing, holding out for the right ledge. We finally made it to a good one around 9:30 p.m. The light was gone, and we had no idea where we were on the route at that point, but I thought we were maybe three-quarters of the way up the ridge and would have quite a bit more climbing to do in the morning, so you can imagine my surprise when we woke up practically on the summit.
 
 ![climbing in the dark](./slesse/slesse-climb-night.jpg "Climbing in the dark")
 
-![summit of slesse](./slesse/manny-slesse-summit.JPG "On the summit. Photo by Manny Pacheco")
+![summit of Slesse](./slesse/manny-slesse-summit.JPG "On the summit. Photo by Manny Pacheco")
 
 ### Descent
 
-There were two options for the descent: we could do a long ridge scramble and then 10 rappels to get back to our car at the trailhead, or we could hike a trail down the opposite side of the mountain into a different valley and hope we could hitchike back to our car. We were both mentally tired of being on exposed rock at that point, so we opted to hike the trail down into the other valley.
+There were two options for the descent: we could do a long ridge scramble and then 10 rappels to get back to our car at the trailhead, or we could hike a trail down the opposite side of the mountain into a different valley and hope we could hitchhike back to our car. We were both mentally tired of being on exposed rock at that point, so we opted to hike the trail down into the other valley.
 
-![descent from slesse](./slesse/slesse-descent.jpg "On the descent")
+![descent from Slesse](./slesse/slesse-descent.jpg "On the descent")
 
-It all worked out and some nice fellow climbers gave us a ridge back to our car.
+It all worked out and some nice fellow climbers gave us a ride back to our car.
 
 ![walking through the brush](./slesse/slesse-descent-2.jpg "Another brushy Cascadian descent")
 

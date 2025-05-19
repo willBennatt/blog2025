@@ -317,6 +317,9 @@
   .inline-flex {
     display: inline-flex;
   }
+  .table {
+    display: table;
+  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -334,6 +337,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
   }
   .w-4\/5 {
     width: calc(4/5 * 100%);
@@ -368,11 +374,20 @@
   .min-w-screen {
     min-width: 100vw;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .grow {
     flex-grow: 1;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .list-decimal {
     list-style-type: decimal;
@@ -434,6 +449,9 @@
       margin-inline-start: calc(calc(var(--spacing) * 3) * var(--tw-space-x-reverse));
       margin-inline-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-x-reverse)));
     }
+  }
+  .gap-y-0 {
+    row-gap: calc(var(--spacing) * 0);
   }
   .gap-y-0\.5 {
     row-gap: calc(var(--spacing) * 0.5);
@@ -621,17 +639,28 @@
   .capitalize {
     text-transform: capitalize;
   }
+  .italic {
+    font-style: italic;
+  }
   .underline {
     text-decoration-line: underline;
   }
   .decoration-salmon {
     text-decoration-color: var(--color-salmon);
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .backdrop-blur-lg {
     --tw-backdrop-blur: blur(var(--blur-lg));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
@@ -1101,6 +1130,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -1285,6 +1319,7 @@
       --tw-space-x-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
@@ -1709,11 +1744,12 @@ pre[class*="language-diff-"] {
 <p>I never had a vendetta against PHP, but I have always used my website more as a fun side project to learn new things than as an actual blog (which you can probably tell based on how few posts I have), so I eventually tore down my old site and decided to rebuild it with a modern tech stack.</p>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/thiswebsite/how-i-built-this/yUsH5oE_30-600.avif 600w"><source type="image/webp" srcset="/blog/thiswebsite/how-i-built-this/yUsH5oE_30-600.webp 600w"><img loading="lazy" decoding="async" src="/blog/thiswebsite/how-i-built-this/yUsH5oE_30-600.png" alt="screenshot of my first website" width="600" height="430"></picture><figcaption>My first website</figcaption></figure>
 <h2 id="other-iterations">Other Iterations</h2>
-<p>I did a lot of local re-building and tearing down before I got to this latest version of my site. In 2021, I re-made my old site using a MEAN stack, which stands for <strong>M</strong>ongoDB, <strong>E</strong>xpress, <strong>A</strong>ngular, and <strong>N</strong>ode. Learning these new tools was great, because I'd heard people talk about MongoDB and Node a lot but had never used it at that point, and using Node with Express was a very different experience than PHP. Working at a big company like Amazon did give me a hatred for dynamically typed languages when they are used for large projects because it quickly becomes very difficult to figure out what type of data any function is dealing with, but I love them for small, personal projects like this. So at work I prefer Typescript, but at home I go for Javascript.</p>
+<p>I did a lot of local re-building and tearing down before I got to this latest version of my site. In 2021, I re-made my old site using a MEAN stack, which stands for <strong>M</strong>ongoDB, <strong>E</strong>xpress, <strong>A</strong>ngular, and <strong>N</strong>ode. Learning these new tools was great, because I'd heard people talk about MongoDB and Node a lot but had never used it at that point, and using Node with Express was a very different experience than PHP.</p>
+<p>Working at a big company like Amazon did give me a hatred for dynamically typed languages when they are used for large projects because it quickly becomes very difficult to figure out what type of data any function is dealing with, but I love them for small, personal projects like this. So at work I prefer Typescript, but at home I go for Javascript.</p>
 <figure data-type="image"><picture><source type="image/avif" srcset="/blog/thiswebsite/how-i-built-this/lKOnfK_qGT-256.avif 256w, /blog/thiswebsite/how-i-built-this/lKOnfK_qGT-500.avif 500w" sizes="auto"><source type="image/webp" srcset="/blog/thiswebsite/how-i-built-this/lKOnfK_qGT-256.webp 256w, /blog/thiswebsite/how-i-built-this/lKOnfK_qGT-500.webp 500w" sizes="auto"><img loading="lazy" decoding="async" src="/blog/thiswebsite/how-i-built-this/lKOnfK_qGT-256.png" alt="mullet meme" width="500" height="560" srcset="/blog/thiswebsite/how-i-built-this/lKOnfK_qGT-256.png 256w, /blog/thiswebsite/how-i-built-this/lKOnfK_qGT-500.png 500w" sizes="auto"></picture></figure>
 <p>However, around 2022 everyone started talking about this new language called Rust. Apparently, it was fast and safe because it used an ownership memory model to achieve compile-time verification of memory and concurrency safety. At AWS, several big components were being <a href="https://aws.amazon.com/blogs/opensource/why-aws-loves-rust-and-how-wed-like-to-help/">rewritten</a> in Rust.</p>
-<p>Eventually, I decided I needed to try it for myself, so I worked through the <a href="https://doc.rust-lang.org/book/">Learn Rust</a> book and started re-building my website backend with it. The ownership model in Rust makes it unlike any other language I've used, and I still find it very un-intuitive to write code in, but it was very satisfying getting it to work.</p>
-<p>Because I was new to the language and found it difficult to write in, I wanted my website to be very simple. I would write my blog posts in Markdown, and then a very simple backend component would translate the Markdown to HTML, and then the server would serve the plain HTML pages.</p>
+<p>I decided I needed to try it for myself, so I worked through the <a href="https://doc.rust-lang.org/book/">Learn Rust</a> book and started re-building my website backend with it. The ownership model in Rust makes it unlike any other language I've used, and I still find it un-intuitive to write code in, but it was very satisfying getting it to work.</p>
+<p>Because I was new to the language and found it difficult to write in, I wanted my website to be very simple. I would write my blog posts in Markdown, and then a backend component would translate the Markdown to HTML, and then the server would serve the plain HTML pages.</p>
 <p>This was fun to build and I learned a lot about Rust from it, but it also didn't really make sense running all of that just to serve a static site.</p>
 <h2 id="the-current-website">The Current Website</h2>
 <p>This year, I heard about <a href="https://www.cloudflare.com/learning/performance/static-site-generator/">static site-generators</a> and realized my little rust project was basically a really bad version of them. At the same time, my girlfriend gave me an idea for a new blog theme: &quot;Will or Won't&quot;, so I completely re-made my website again using the new theme and the static site-generator <a href="https://www.11ty.dev/docs/">Eleventy</a>.</p>
@@ -1787,7 +1823,7 @@ pre[class*="language-diff-"] {
 					</div>
 				</footer>
 
-				<!-- This page `/blog/thiswebsite/how-i-built-this/` was built on 2025-05-18T16:19:38.049Z -->
+				<!-- This page `/blog/thiswebsite/how-i-built-this/` was built on 2025-05-19T11:58:54.181Z -->
 				<script type="module" src="/dist/Wxzq_87y0h.js"></script>
 			</body>
 		</html>
